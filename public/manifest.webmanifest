@@ -1,0 +1,23 @@
+{
+  "name": "Treasure Hunt — Smart Cities Summit",
+  "short_name": "Treasure Hunt",
+  "description": "Scan NFC tags and QR codes at the Smart Cities Summit to earn rewards.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b14",
+  "theme_color": "#0b0b14",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/treasure-hunt-only-logo.png",
+      "sizes": "512x488",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

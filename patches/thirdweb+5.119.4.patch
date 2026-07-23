@@ -1,0 +1,146 @@
+diff --git a/node_modules/thirdweb/dist/cjs/chains/utils.js b/node_modules/thirdweb/dist/cjs/chains/utils.js
+index 86773186..cae34d05 100644
+--- a/node_modules/thirdweb/dist/cjs/chains/utils.js
++++ b/node_modules/thirdweb/dist/cjs/chains/utils.js
+@@ -254,6 +254,10 @@ async function getChainNativeCurrencyName(chain) {
+  */
+ function getChainMetadata(chain) {
+     const chainId = chain.id;
++    // Skip API call if chain already has complete local metadata (custom chains)
++    if (chain.name && chain.nativeCurrency?.symbol && chain.rpc) {
++        return Promise.resolve(createChainMetadata(chain));
++    }
+     return (0, withCache_js_1.withCache)(async () => {
+         try {
+             const res = await fetch(`https://api.thirdweb.com/v1/chains/${chainId}`);
+diff --git a/node_modules/thirdweb/dist/cjs/wallets/smart/lib/paymaster.js b/node_modules/thirdweb/dist/cjs/wallets/smart/lib/paymaster.js
+index 28cda078..ada0af18 100644
+--- a/node_modules/thirdweb/dist/cjs/wallets/smart/lib/paymaster.js
++++ b/node_modules/thirdweb/dist/cjs/wallets/smart/lib/paymaster.js
+@@ -25,7 +25,7 @@ const utils_js_1 = require("./utils.js");
+  * @walletUtils
+  */
+ async function getPaymasterAndData(args) {
+-    const { userOp, paymasterOverride, client, chain, entrypointAddress } = args;
++    const { userOp, paymasterOverride, client, chain, entrypointAddress, bundlerUrl } = args;
+     if (paymasterOverride) {
+         return paymasterOverride(userOp);
+     }
+@@ -33,7 +33,7 @@ async function getPaymasterAndData(args) {
+         "Content-Type": "application/json",
+     };
+     const entrypoint = entrypointAddress ?? constants_js_1.ENTRYPOINT_ADDRESS_v0_6;
+-    const paymasterUrl = (0, constants_js_1.getDefaultBundlerUrl)(chain);
++    const paymasterUrl = bundlerUrl ?? (0, constants_js_1.getDefaultBundlerUrl)(chain);
+     const body = {
+         id: 1,
+         jsonrpc: "2.0",
+diff --git a/node_modules/thirdweb/dist/cjs/wallets/smart/lib/userop.js b/node_modules/thirdweb/dist/cjs/wallets/smart/lib/userop.js
+index b3c8b4ae..4f4a9405 100644
+--- a/node_modules/thirdweb/dist/cjs/wallets/smart/lib/userop.js
++++ b/node_modules/thirdweb/dist/cjs/wallets/smart/lib/userop.js
+@@ -241,6 +241,7 @@ async function populateUserOp_v0_7(args) {
+         const paymasterResult = (await (0, paymaster_js_1.getPaymasterAndData)({
+             chain,
+             client,
++            bundlerUrl: overrides?.bundlerUrl,
+             entrypointAddress: overrides?.entrypointAddress,
+             paymasterOverride: overrides?.paymaster,
+             userOp: partialOp,
+@@ -293,6 +294,7 @@ async function populateUserOp_v0_7(args) {
+             const paymasterResult2 = (await (0, paymaster_js_1.getPaymasterAndData)({
+                 chain,
+                 client,
++                bundlerUrl: overrides?.bundlerUrl,
+                 entrypointAddress: overrides?.entrypointAddress,
+                 paymasterOverride: overrides?.paymaster,
+                 userOp: partialOp,
+@@ -360,6 +362,7 @@ async function populateUserOp_v0_6(args) {
+         const paymasterResult = await (0, paymaster_js_1.getPaymasterAndData)({
+             chain,
+             client,
++            bundlerUrl: overrides?.bundlerUrl,
+             entrypointAddress: overrides?.entrypointAddress,
+             paymasterOverride: overrides?.paymaster,
+             userOp: partialOp,
+@@ -392,6 +395,7 @@ async function populateUserOp_v0_6(args) {
+                 const paymasterResult2 = await (0, paymaster_js_1.getPaymasterAndData)({
+                     chain,
+                     client,
++                    bundlerUrl: overrides?.bundlerUrl,
+                     entrypointAddress: overrides?.entrypointAddress,
+                     paymasterOverride: overrides?.paymaster,
+                     userOp: partialOp,
+diff --git a/node_modules/thirdweb/dist/esm/chains/utils.js b/node_modules/thirdweb/dist/esm/chains/utils.js
+index 66533fb1..9b698f93 100644
+--- a/node_modules/thirdweb/dist/esm/chains/utils.js
++++ b/node_modules/thirdweb/dist/esm/chains/utils.js
+@@ -238,6 +238,10 @@ export async function getChainNativeCurrencyName(chain) {
+  */
+ export function getChainMetadata(chain) {
+     const chainId = chain.id;
++    // Skip API call if chain already has complete local metadata (custom chains)
++    if (chain.name && chain.nativeCurrency?.symbol && chain.rpc) {
++        return Promise.resolve(createChainMetadata(chain));
++    }
+     return withCache(async () => {
+         try {
+             const res = await fetch(`https://api.thirdweb.com/v1/chains/${chainId}`);
+diff --git a/node_modules/thirdweb/dist/esm/wallets/smart/lib/paymaster.js b/node_modules/thirdweb/dist/esm/wallets/smart/lib/paymaster.js
+index 7127dfd7..4f549f28 100644
+--- a/node_modules/thirdweb/dist/esm/wallets/smart/lib/paymaster.js
++++ b/node_modules/thirdweb/dist/esm/wallets/smart/lib/paymaster.js
+@@ -22,7 +22,7 @@ import { hexlifyUserOp } from "./utils.js";
+  * @walletUtils
+  */
+ export async function getPaymasterAndData(args) {
+-    const { userOp, paymasterOverride, client, chain, entrypointAddress } = args;
++    const { userOp, paymasterOverride, client, chain, entrypointAddress, bundlerUrl } = args;
+     if (paymasterOverride) {
+         return paymasterOverride(userOp);
+     }
+@@ -30,7 +30,7 @@ export async function getPaymasterAndData(args) {
+         "Content-Type": "application/json",
+     };
+     const entrypoint = entrypointAddress ?? ENTRYPOINT_ADDRESS_v0_6;
+-    const paymasterUrl = getDefaultBundlerUrl(chain);
++    const paymasterUrl = bundlerUrl ?? getDefaultBundlerUrl(chain);
+     const body = {
+         id: 1,
+         jsonrpc: "2.0",
+diff --git a/node_modules/thirdweb/dist/esm/wallets/smart/lib/userop.js b/node_modules/thirdweb/dist/esm/wallets/smart/lib/userop.js
+index 39c0872d..ca222ceb 100644
+--- a/node_modules/thirdweb/dist/esm/wallets/smart/lib/userop.js
++++ b/node_modules/thirdweb/dist/esm/wallets/smart/lib/userop.js
+@@ -231,6 +231,7 @@ async function populateUserOp_v0_7(args) {
+         const paymasterResult = (await getPaymasterAndData({
+             chain,
+             client,
++            bundlerUrl: overrides?.bundlerUrl,
+             entrypointAddress: overrides?.entrypointAddress,
+             paymasterOverride: overrides?.paymaster,
+             userOp: partialOp,
+@@ -283,6 +284,7 @@ async function populateUserOp_v0_7(args) {
+             const paymasterResult2 = (await getPaymasterAndData({
+                 chain,
+                 client,
++                bundlerUrl: overrides?.bundlerUrl,
+                 entrypointAddress: overrides?.entrypointAddress,
+                 paymasterOverride: overrides?.paymaster,
+                 userOp: partialOp,
+@@ -350,6 +352,7 @@ async function populateUserOp_v0_6(args) {
+         const paymasterResult = await getPaymasterAndData({
+             chain,
+             client,
++            bundlerUrl: overrides?.bundlerUrl,
+             entrypointAddress: overrides?.entrypointAddress,
+             paymasterOverride: overrides?.paymaster,
+             userOp: partialOp,
+@@ -382,6 +385,7 @@ async function populateUserOp_v0_6(args) {
+                 const paymasterResult2 = await getPaymasterAndData({
+                     chain,
+                     client,
++                    bundlerUrl: overrides?.bundlerUrl,
+                     entrypointAddress: overrides?.entrypointAddress,
+                     paymasterOverride: overrides?.paymaster,
+                     userOp: partialOp,

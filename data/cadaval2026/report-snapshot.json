@@ -1,0 +1,5147 @@
+{
+  "kpis": {
+    "totalPlayers": 126,
+    "pctClaimedReward": 98.4,
+    "totalFinds": 2182,
+    "tokensDistributed": 76775,
+    "merchPurchases": 421,
+    "totalSocialClaims": 3,
+    "tokenHolders": 83,
+    "tokenSymbol": "FCT",
+    "tokenName": "Festival do Cadaval Test",
+    "daysActive": 2,
+    "returnerCounts": {
+      "2": 20,
+      "1": 104
+    },
+    "paymasterSponsoredTxs": 2618,
+    "paymasterTotalTxs": 2618,
+    "paymasterSponsoredPct": 100.0
+  },
+  "tags": [
+    {
+      "rank": 1,
+      "id": 4,
+      "name": "Treasure Hunt",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 108,
+      "uniqueFinders": 108,
+      "pct": 85.7,
+      "ttf": 72453,
+      "reward": 100,
+      "x": 32.74,
+      "y": 52.87
+    },
+    {
+      "rank": 2,
+      "id": 3,
+      "name": "Leader oeste",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 99,
+      "uniqueFinders": 99,
+      "pct": 78.6,
+      "ttf": 72475,
+      "reward": 100,
+      "x": 34.71,
+      "y": 52.24
+    },
+    {
+      "rank": 3,
+      "id": 42,
+      "name": "Palco secudario",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 87,
+      "uniqueFinders": 87,
+      "pct": 69.0,
+      "ttf": 75909,
+      "reward": 100,
+      "x": 36.53,
+      "y": 45.48
+    },
+    {
+      "rank": 4,
+      "id": 39,
+      "name": "Palco principal",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 61,
+      "uniqueFinders": 61,
+      "pct": 48.4,
+      "ttf": 76033,
+      "reward": 100,
+      "x": 56.36,
+      "y": 29.19
+    },
+    {
+      "rank": 5,
+      "id": 22,
+      "name": "Hidden",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 58,
+      "uniqueFinders": 58,
+      "pct": 46.0,
+      "ttf": 76522,
+      "reward": 100,
+      "x": 29.57,
+      "y": 50.31
+    },
+    {
+      "rank": 6,
+      "id": 11,
+      "name": "De baixo da ponte",
+      "hiddenBy": "Carol",
+      "hiddenByAddress": "0x4261e6d6cf4cfcdbe33e448c813c74d780a28842",
+      "finds": 56,
+      "uniqueFinders": 56,
+      "pct": 44.4,
+      "ttf": 69669,
+      "reward": 100,
+      "x": 31.52,
+      "y": 42.21
+    },
+    {
+      "rank": 7,
+      "id": 18,
+      "name": "Diarreias",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 55,
+      "uniqueFinders": 55,
+      "pct": 43.7,
+      "ttf": 76287,
+      "reward": 100,
+      "x": 60.08,
+      "y": 59.35
+    },
+    {
+      "rank": 8,
+      "id": 16,
+      "name": "Doçarias Telma churros",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 54,
+      "uniqueFinders": 54,
+      "pct": 42.9,
+      "ttf": 77175,
+      "reward": 100,
+      "x": 73.37,
+      "y": 49.36
+    },
+    {
+      "rank": 9,
+      "id": 2,
+      "name": "Ponte",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 51,
+      "uniqueFinders": 51,
+      "pct": 40.5,
+      "ttf": 67727,
+      "reward": 100,
+      "x": 33.04,
+      "y": 36.73
+    },
+    {
+      "rank": 10,
+      "id": 25,
+      "name": "Entrada",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 50,
+      "uniqueFinders": 50,
+      "pct": 39.7,
+      "ttf": 76865,
+      "reward": 100,
+      "x": 12.47,
+      "y": 50.37
+    },
+    {
+      "rank": 11,
+      "id": 21,
+      "name": "Entrada",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 49,
+      "uniqueFinders": 49,
+      "pct": 38.9,
+      "ttf": 76607,
+      "reward": 100,
+      "x": 80.38,
+      "y": 48.36
+    },
+    {
+      "rank": 12,
+      "id": 23,
+      "name": "Matraquilhos",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 48,
+      "uniqueFinders": 48,
+      "pct": 38.1,
+      "ttf": 76452,
+      "reward": 100,
+      "x": 26.93,
+      "y": 50.29
+    },
+    {
+      "rank": 13,
+      "id": 45,
+      "name": "Recolha os desejos do seu cão",
+      "hiddenBy": "Diana Dias",
+      "hiddenByAddress": "0x4f9e4a62db9d0cfbd57de5f216717efd5c4237b8",
+      "finds": 48,
+      "uniqueFinders": 48,
+      "pct": 38.1,
+      "ttf": 79837,
+      "reward": 100,
+      "x": 27.18,
+      "y": 70.89
+    },
+    {
+      "rank": 14,
+      "id": 9,
+      "name": "Parque",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 46,
+      "uniqueFinders": 46,
+      "pct": 36.5,
+      "ttf": 76668,
+      "reward": 100,
+      "x": 56.63,
+      "y": 60.13
+    },
+    {
+      "rank": 15,
+      "id": 38,
+      "name": "Lounge",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 46,
+      "uniqueFinders": 46,
+      "pct": 36.5,
+      "ttf": 76629,
+      "reward": 100,
+      "x": 61.88,
+      "y": 32.68
+    },
+    {
+      "rank": 16,
+      "id": 37,
+      "name": "Palco secundário",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 45,
+      "uniqueFinders": 45,
+      "pct": 35.7,
+      "ttf": 75889,
+      "reward": 100,
+      "x": 32.52,
+      "y": 45.08
+    },
+    {
+      "rank": 17,
+      "id": 32,
+      "name": "Lago",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 45,
+      "uniqueFinders": 45,
+      "pct": 35.7,
+      "ttf": 77303,
+      "reward": 100,
+      "x": 9.74,
+      "y": 89.86
+    },
+    {
+      "rank": 18,
+      "id": 15,
+      "name": "Hora do doce",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 44,
+      "uniqueFinders": 44,
+      "pct": 34.9,
+      "ttf": 76216,
+      "reward": 100,
+      "x": 66.67,
+      "y": 51.45
+    },
+    {
+      "rank": 19,
+      "id": 17,
+      "name": "Docaria telma",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 43,
+      "uniqueFinders": 43,
+      "pct": 34.1,
+      "ttf": 76230,
+      "reward": 100,
+      "x": 71.26,
+      "y": 50.1
+    },
+    {
+      "rank": 20,
+      "id": 40,
+      "name": "Palco principal",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 43,
+      "uniqueFinders": 43,
+      "pct": 34.1,
+      "ttf": 76127,
+      "reward": 100,
+      "x": 45.84,
+      "y": 28.55
+    },
+    {
+      "rank": 21,
+      "id": 41,
+      "name": "Lounge",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 43,
+      "uniqueFinders": 43,
+      "pct": 34.1,
+      "ttf": 76293,
+      "reward": 100,
+      "x": 47.27,
+      "y": 33.47
+    },
+    {
+      "rank": 22,
+      "id": 26,
+      "name": "Entrada para o mato",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 42,
+      "uniqueFinders": 42,
+      "pct": 33.3,
+      "ttf": 76899,
+      "reward": 100,
+      "x": 13.76,
+      "y": 44.13
+    },
+    {
+      "rank": 23,
+      "id": 14,
+      "name": "Lápis 3",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 42,
+      "uniqueFinders": 42,
+      "pct": 33.3,
+      "ttf": 70113,
+      "reward": 100,
+      "x": 50.0,
+      "y": 53.86
+    },
+    {
+      "rank": 24,
+      "id": 28,
+      "name": "Arcada",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 42,
+      "uniqueFinders": 42,
+      "pct": 33.3,
+      "ttf": 77216,
+      "reward": 100,
+      "x": 6.63,
+      "y": 26.7
+    },
+    {
+      "rank": 25,
+      "id": 20,
+      "name": "Central park",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 41,
+      "uniqueFinders": 41,
+      "pct": 32.5,
+      "ttf": 76570,
+      "reward": 100,
+      "x": 75.57,
+      "y": 69.92
+    },
+    {
+      "rank": 26,
+      "id": 10,
+      "name": "Lápis 1",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 39,
+      "uniqueFinders": 39,
+      "pct": 31.0,
+      "ttf": 69810,
+      "reward": 100,
+      "x": 48.59,
+      "y": 55.17
+    },
+    {
+      "rank": 27,
+      "id": 47,
+      "name": "Porquê vieste aqui?",
+      "hiddenBy": "Matt1830",
+      "hiddenByAddress": "0xbbc8434771169eb6bb1b51d6e3877d7a5ee5f161",
+      "finds": 39,
+      "uniqueFinders": 39,
+      "pct": 31.0,
+      "ttf": 145138,
+      "reward": 100,
+      "x": 32.52,
+      "y": 37.58
+    },
+    {
+      "rank": 28,
+      "id": 29,
+      "name": "Fonte de agua",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 38,
+      "uniqueFinders": 38,
+      "pct": 30.2,
+      "ttf": 77170,
+      "reward": 100,
+      "x": 14.37,
+      "y": 29.17
+    },
+    {
+      "rank": 29,
+      "id": 5,
+      "name": "Stand Oficial",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 38,
+      "uniqueFinders": 38,
+      "pct": 30.2,
+      "ttf": 68831,
+      "reward": 100,
+      "x": 44.18,
+      "y": 50.22
+    },
+    {
+      "rank": 30,
+      "id": 33,
+      "name": "Ambulância",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 37,
+      "uniqueFinders": 37,
+      "pct": 29.4,
+      "ttf": 77329,
+      "reward": 100,
+      "x": 27.99,
+      "y": 76.25
+    },
+    {
+      "rank": 31,
+      "id": 48,
+      "name": "Habibi",
+      "hiddenBy": "Carlos19__mvs",
+      "hiddenByAddress": "0x23f43eabbf3c77c8c9b2cac6470e4dcf6bf88d17",
+      "finds": 37,
+      "uniqueFinders": 37,
+      "pct": 29.4,
+      "ttf": 148100,
+      "reward": 100,
+      "x": 25.69,
+      "y": 38.73
+    },
+    {
+      "rank": 32,
+      "id": 49,
+      "name": "Hambúrguer com Zalface",
+      "hiddenBy": "camila",
+      "hiddenByAddress": "0x0e6f3a106c516223b305a475f397e3b4e08881b7",
+      "finds": 37,
+      "uniqueFinders": 37,
+      "pct": 29.4,
+      "ttf": 147212,
+      "reward": 100,
+      "x": 28.12,
+      "y": 39.21
+    },
+    {
+      "rank": 33,
+      "id": 19,
+      "name": "Lixo",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 36,
+      "uniqueFinders": 36,
+      "pct": 28.6,
+      "ttf": 76547,
+      "reward": 100,
+      "x": 64.31,
+      "y": 58.54
+    },
+    {
+      "rank": 34,
+      "id": 27,
+      "name": "Fim das escadas",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 35,
+      "uniqueFinders": 35,
+      "pct": 27.8,
+      "ttf": 77002,
+      "reward": 100,
+      "x": 8.41,
+      "y": 36.48
+    },
+    {
+      "rank": 35,
+      "id": 34,
+      "name": "Tenda gaming",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 34,
+      "uniqueFinders": 34,
+      "pct": 27.0,
+      "ttf": 77513,
+      "reward": 100,
+      "x": 23.54,
+      "y": 65.32
+    },
+    {
+      "rank": 36,
+      "id": 31,
+      "name": "Ponta do mapa",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 34,
+      "uniqueFinders": 34,
+      "pct": 27.0,
+      "ttf": 77072,
+      "reward": 100,
+      "x": 12.78,
+      "y": 0.45
+    },
+    {
+      "rank": 37,
+      "id": 24,
+      "name": "Touro mecanico",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 34,
+      "uniqueFinders": 34,
+      "pct": 27.0,
+      "ttf": 76833,
+      "reward": 100,
+      "x": 23.91,
+      "y": 51.79
+    },
+    {
+      "rank": 38,
+      "id": 30,
+      "name": "Banco a beira lago",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 31,
+      "uniqueFinders": 31,
+      "pct": 24.6,
+      "ttf": 77094,
+      "reward": 100,
+      "x": 7.25,
+      "y": 17.37
+    },
+    {
+      "rank": 39,
+      "id": 35,
+      "name": "Skate park",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 31,
+      "uniqueFinders": 31,
+      "pct": 24.6,
+      "ttf": 77472,
+      "reward": 100,
+      "x": 33.68,
+      "y": 65.85
+    },
+    {
+      "rank": 40,
+      "id": 44,
+      "name": "Cofre table",
+      "hiddenBy": "Abelhas",
+      "hiddenByAddress": "0xa7c588df4bc9ddbd992d24fd94fc641dab922274",
+      "finds": 29,
+      "uniqueFinders": 29,
+      "pct": 23.0,
+      "ttf": 78553,
+      "reward": 100,
+      "x": 72.41,
+      "y": 59.8
+    },
+    {
+      "rank": 41,
+      "id": 12,
+      "name": "Baloiço",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 28,
+      "uniqueFinders": 28,
+      "pct": 22.2,
+      "ttf": 78283,
+      "reward": 100,
+      "x": 51.06,
+      "y": 65.12
+    },
+    {
+      "rank": 42,
+      "id": 53,
+      "name": "Bandeira C.A",
+      "hiddenBy": "Anabela",
+      "hiddenByAddress": "0xbe17ce90375aeb14231450e0123b29393055fcd0",
+      "finds": 27,
+      "uniqueFinders": 27,
+      "pct": 21.4,
+      "ttf": 152807,
+      "reward": 100,
+      "x": 19.65,
+      "y": 53.25
+    },
+    {
+      "rank": 43,
+      "id": 52,
+      "name": "Micas",
+      "hiddenBy": "Micael",
+      "hiddenByAddress": "0x17e8e6c0e13a999ec260551d9ab6cbb542676973",
+      "finds": 27,
+      "uniqueFinders": 27,
+      "pct": 21.4,
+      "ttf": 148124,
+      "reward": 100,
+      "x": 15.65,
+      "y": 43.79
+    },
+    {
+      "rank": 44,
+      "id": 60,
+      "name": "Cruz Enrico",
+      "hiddenBy": "Neno",
+      "hiddenByAddress": "0x32c6d2cacbe7d11e48d73ebb714a4a31373d3f3d",
+      "finds": 27,
+      "uniqueFinders": 27,
+      "pct": 21.4,
+      "ttf": 152681,
+      "reward": 100,
+      "x": 35.01,
+      "y": 72.93
+    },
+    {
+      "rank": 45,
+      "id": 36,
+      "name": "Skate park",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 26,
+      "uniqueFinders": 26,
+      "pct": 20.6,
+      "ttf": 77437,
+      "reward": 100,
+      "x": 44.13,
+      "y": 69.0
+    },
+    {
+      "rank": 46,
+      "id": 51,
+      "name": "Biblioteca",
+      "hiddenBy": "Simao",
+      "hiddenByAddress": "0x7fe4bad24cad8947084287360148d32a6749c231",
+      "finds": 25,
+      "uniqueFinders": 25,
+      "pct": 19.8,
+      "ttf": 144665,
+      "reward": 100,
+      "x": 32.18,
+      "y": 77.26
+    },
+    {
+      "rank": 47,
+      "id": 7,
+      "name": "Bar",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 22,
+      "uniqueFinders": 22,
+      "pct": 17.5,
+      "ttf": 78508,
+      "reward": 100,
+      "x": 55.07,
+      "y": 48.35
+    },
+    {
+      "rank": 48,
+      "id": 54,
+      "name": "2550",
+      "hiddenBy": "2550",
+      "hiddenByAddress": "0x91ad5a991befa27767fb0040a502e14378aef742",
+      "finds": 20,
+      "uniqueFinders": 20,
+      "pct": 15.9,
+      "ttf": 154876,
+      "reward": 100,
+      "x": 21.11,
+      "y": 28.61
+    },
+    {
+      "rank": 49,
+      "id": 59,
+      "name": "+1",
+      "hiddenBy": "Carolfg",
+      "hiddenByAddress": "0xcb547ad10f637542427427047d01dcd5a071ca59",
+      "finds": 20,
+      "uniqueFinders": 20,
+      "pct": 15.9,
+      "ttf": 155037,
+      "reward": 100,
+      "x": 29.13,
+      "y": 22.05
+    },
+    {
+      "rank": 50,
+      "id": 46,
+      "name": "Mini ponte",
+      "hiddenBy": "Francisco",
+      "hiddenByAddress": "0xe263e7eb0bc31ab26d7cd40a692e7b8896caba02",
+      "finds": 20,
+      "uniqueFinders": 20,
+      "pct": 15.9,
+      "ttf": 79842,
+      "reward": 100,
+      "x": 5.6,
+      "y": 75.65
+    },
+    {
+      "rank": 51,
+      "id": 58,
+      "name": "Laudaval",
+      "hiddenBy": "Laura F",
+      "hiddenByAddress": "0xa28aa31061ee50e41bb24346b05c59de14af2ccd",
+      "finds": 17,
+      "uniqueFinders": 17,
+      "pct": 13.5,
+      "ttf": 155173,
+      "reward": 100,
+      "x": 29.69,
+      "y": 14.45
+    },
+    {
+      "rank": 52,
+      "id": 6,
+      "name": "Pagar um copo",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 14,
+      "uniqueFinders": 14,
+      "pct": 11.1,
+      "ttf": 78400,
+      "reward": 100,
+      "x": 48.87,
+      "y": 49.15
+    },
+    {
+      "rank": 53,
+      "id": 56,
+      "name": "Escondido na ponte",
+      "hiddenBy": "Marisa",
+      "hiddenByAddress": "0x33a808e234e5cd2ad70d9ca3d3ecde3016f5db19",
+      "finds": 9,
+      "uniqueFinders": 9,
+      "pct": 7.1,
+      "ttf": 165696,
+      "reward": 100,
+      "x": 31.95,
+      "y": 36.99
+    },
+    {
+      "rank": 54,
+      "id": 8,
+      "name": "Come e bebe",
+      "hiddenBy": null,
+      "hiddenByAddress": null,
+      "finds": 8,
+      "uniqueFinders": 8,
+      "pct": 6.3,
+      "ttf": 79225,
+      "reward": 100,
+      "x": 64.51,
+      "y": 49.77
+    },
+    {
+      "rank": 55,
+      "id": 50,
+      "name": "Teg ponte",
+      "hiddenBy": "Lucas",
+      "hiddenByAddress": "0xf98673b75ca4484a7db0570ecfb80a6884606376",
+      "finds": 6,
+      "uniqueFinders": 6,
+      "pct": 4.8,
+      "ttf": 165041,
+      "reward": 100,
+      "x": 27.29,
+      "y": 38.34
+    },
+    {
+      "rank": 56,
+      "id": 57,
+      "name": "Agacha",
+      "hiddenBy": "Beatrizzzeee",
+      "hiddenByAddress": "0xa2c9ef772a859acc22230091647e700c2912df3c",
+      "finds": 6,
+      "uniqueFinders": 6,
+      "pct": 4.8,
+      "ttf": 154790,
+      "reward": 100,
+      "x": 42.13,
+      "y": 46.21
+    },
+    {
+      "rank": 57,
+      "id": 55,
+      "name": "Varanda da bibloteca",
+      "hiddenBy": "L123",
+      "hiddenByAddress": "0x7ac8ce426713bdfffae6822ca4326f2a5cda90ea",
+      "finds": 5,
+      "uniqueFinders": 5,
+      "pct": 4.0,
+      "ttf": 166144,
+      "reward": 100,
+      "x": 23.67,
+      "y": 81.11
+    }
+  ],
+  "findsHistogram": [
+    {
+      "label": "0–5",
+      "count": 0
+    },
+    {
+      "label": "5–10",
+      "count": 5
+    },
+    {
+      "label": "10–20",
+      "count": 2
+    },
+    {
+      "label": "20–40",
+      "count": 25
+    },
+    {
+      "label": "40–70",
+      "count": 22
+    },
+    {
+      "label": "70–100",
+      "count": 2
+    },
+    {
+      "label": "100–200",
+      "count": 1
+    }
+  ],
+  "hourBuckets": [
+    {
+      "h": 0,
+      "day": 0,
+      "localHour": 0,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 1,
+      "day": 0,
+      "localHour": 1,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 2,
+      "day": 0,
+      "localHour": 2,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 3,
+      "day": 0,
+      "localHour": 3,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 4,
+      "day": 0,
+      "localHour": 4,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 5,
+      "day": 0,
+      "localHour": 5,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 6,
+      "day": 0,
+      "localHour": 6,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 7,
+      "day": 0,
+      "localHour": 7,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 8,
+      "day": 0,
+      "localHour": 8,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 9,
+      "day": 0,
+      "localHour": 9,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 10,
+      "day": 0,
+      "localHour": 10,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 11,
+      "day": 0,
+      "localHour": 11,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 12,
+      "day": 0,
+      "localHour": 12,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 13,
+      "day": 0,
+      "localHour": 13,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 14,
+      "day": 0,
+      "localHour": 14,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 15,
+      "day": 0,
+      "localHour": 15,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 16,
+      "day": 0,
+      "localHour": 16,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 17,
+      "day": 0,
+      "localHour": 17,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 18,
+      "day": 0,
+      "localHour": 18,
+      "finds": 1,
+      "merch": 0,
+      "social": 0,
+      "total": 1
+    },
+    {
+      "h": 19,
+      "day": 0,
+      "localHour": 19,
+      "finds": 4,
+      "merch": 0,
+      "social": 0,
+      "total": 4
+    },
+    {
+      "h": 20,
+      "day": 0,
+      "localHour": 20,
+      "finds": 3,
+      "merch": 0,
+      "social": 0,
+      "total": 3
+    },
+    {
+      "h": 21,
+      "day": 0,
+      "localHour": 21,
+      "finds": 114,
+      "merch": 6,
+      "social": 0,
+      "total": 120
+    },
+    {
+      "h": 22,
+      "day": 0,
+      "localHour": 22,
+      "finds": 225,
+      "merch": 2,
+      "social": 0,
+      "total": 227
+    },
+    {
+      "h": 23,
+      "day": 0,
+      "localHour": 23,
+      "finds": 130,
+      "merch": 7,
+      "social": 0,
+      "total": 137
+    },
+    {
+      "h": 24,
+      "day": 1,
+      "localHour": 0,
+      "finds": 138,
+      "merch": 20,
+      "social": 0,
+      "total": 158
+    },
+    {
+      "h": 25,
+      "day": 1,
+      "localHour": 1,
+      "finds": 61,
+      "merch": 9,
+      "social": 0,
+      "total": 70
+    },
+    {
+      "h": 26,
+      "day": 1,
+      "localHour": 2,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 27,
+      "day": 1,
+      "localHour": 3,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 28,
+      "day": 1,
+      "localHour": 4,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 29,
+      "day": 1,
+      "localHour": 5,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 30,
+      "day": 1,
+      "localHour": 6,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 31,
+      "day": 1,
+      "localHour": 7,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 32,
+      "day": 1,
+      "localHour": 8,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 33,
+      "day": 1,
+      "localHour": 9,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 34,
+      "day": 1,
+      "localHour": 10,
+      "finds": 0,
+      "merch": 0,
+      "social": 0,
+      "total": 0
+    },
+    {
+      "h": 35,
+      "day": 1,
+      "localHour": 11,
+      "finds": 4,
+      "merch": 0,
+      "social": 0,
+      "total": 4
+    },
+    {
+      "h": 36,
+      "day": 1,
+      "localHour": 12,
+      "finds": 6,
+      "merch": 0,
+      "social": 0,
+      "total": 6
+    },
+    {
+      "h": 37,
+      "day": 1,
+      "localHour": 13,
+      "finds": 3,
+      "merch": 0,
+      "social": 0,
+      "total": 3
+    },
+    {
+      "h": 38,
+      "day": 1,
+      "localHour": 14,
+      "finds": 54,
+      "merch": 0,
+      "social": 0,
+      "total": 54
+    },
+    {
+      "h": 39,
+      "day": 1,
+      "localHour": 15,
+      "finds": 110,
+      "merch": 21,
+      "social": 0,
+      "total": 131
+    },
+    {
+      "h": 40,
+      "day": 1,
+      "localHour": 16,
+      "finds": 144,
+      "merch": 19,
+      "social": 0,
+      "total": 163
+    },
+    {
+      "h": 41,
+      "day": 1,
+      "localHour": 17,
+      "finds": 180,
+      "merch": 17,
+      "social": 0,
+      "total": 197
+    },
+    {
+      "h": 42,
+      "day": 1,
+      "localHour": 18,
+      "finds": 152,
+      "merch": 64,
+      "social": 0,
+      "total": 216
+    },
+    {
+      "h": 43,
+      "day": 1,
+      "localHour": 19,
+      "finds": 217,
+      "merch": 83,
+      "social": 0,
+      "total": 300
+    },
+    {
+      "h": 44,
+      "day": 1,
+      "localHour": 20,
+      "finds": 306,
+      "merch": 30,
+      "social": 0,
+      "total": 336
+    },
+    {
+      "h": 45,
+      "day": 1,
+      "localHour": 21,
+      "finds": 98,
+      "merch": 90,
+      "social": 0,
+      "total": 188
+    },
+    {
+      "h": 46,
+      "day": 1,
+      "localHour": 22,
+      "finds": 166,
+      "merch": 34,
+      "social": 0,
+      "total": 200
+    },
+    {
+      "h": 47,
+      "day": 1,
+      "localHour": 23,
+      "finds": 68,
+      "merch": 17,
+      "social": 0,
+      "total": 85
+    }
+  ],
+  "skus": [
+    {
+      "sku": "M-004",
+      "name": "Copo Crédito Agrícola",
+      "category": "Sponsor",
+      "minutesToSellout": 1435,
+      "units": 60,
+      "stock": 100,
+      "stockEfficiency": 0.6,
+      "unitsPerHour": 2.51,
+      "price": 700,
+      "tokensExchanged": 28100,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779484322,
+          "n": 1
+        },
+        {
+          "t": 1779487192,
+          "n": 4
+        },
+        {
+          "t": 1779490062,
+          "n": 9
+        },
+        {
+          "t": 1779492932,
+          "n": 13
+        },
+        {
+          "t": 1779495802,
+          "n": 13
+        },
+        {
+          "t": 1779498672,
+          "n": 13
+        },
+        {
+          "t": 1779501542,
+          "n": 13
+        },
+        {
+          "t": 1779504412,
+          "n": 13
+        },
+        {
+          "t": 1779507282,
+          "n": 13
+        },
+        {
+          "t": 1779510152,
+          "n": 13
+        },
+        {
+          "t": 1779513022,
+          "n": 13
+        },
+        {
+          "t": 1779515892,
+          "n": 13
+        },
+        {
+          "t": 1779518762,
+          "n": 13
+        },
+        {
+          "t": 1779521632,
+          "n": 13
+        },
+        {
+          "t": 1779524502,
+          "n": 13
+        },
+        {
+          "t": 1779527372,
+          "n": 13
+        },
+        {
+          "t": 1779530242,
+          "n": 13
+        },
+        {
+          "t": 1779533112,
+          "n": 13
+        },
+        {
+          "t": 1779535982,
+          "n": 13
+        },
+        {
+          "t": 1779538852,
+          "n": 13
+        },
+        {
+          "t": 1779541722,
+          "n": 13
+        },
+        {
+          "t": 1779544592,
+          "n": 14
+        },
+        {
+          "t": 1779547462,
+          "n": 15
+        },
+        {
+          "t": 1779550332,
+          "n": 18
+        },
+        {
+          "t": 1779553202,
+          "n": 18
+        },
+        {
+          "t": 1779556072,
+          "n": 24
+        },
+        {
+          "t": 1779558942,
+          "n": 35
+        },
+        {
+          "t": 1779561812,
+          "n": 35
+        },
+        {
+          "t": 1779564682,
+          "n": 50
+        },
+        {
+          "t": 1779567552,
+          "n": 55
+        },
+        {
+          "t": 1779570422,
+          "n": 59
+        },
+        {
+          "t": 1779573292,
+          "n": 60
+        }
+      ]
+    },
+    {
+      "sku": "M-007",
+      "name": "Crachá do festival",
+      "category": "Festival",
+      "minutesToSellout": 1554,
+      "units": 57,
+      "stock": 57,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 2.2,
+      "price": 1000,
+      "tokensExchanged": 19300,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779478474,
+          "n": 1
+        },
+        {
+          "t": 1779481582,
+          "n": 2
+        },
+        {
+          "t": 1779484690,
+          "n": 2
+        },
+        {
+          "t": 1779487798,
+          "n": 3
+        },
+        {
+          "t": 1779490906,
+          "n": 4
+        },
+        {
+          "t": 1779494014,
+          "n": 4
+        },
+        {
+          "t": 1779497122,
+          "n": 4
+        },
+        {
+          "t": 1779500230,
+          "n": 4
+        },
+        {
+          "t": 1779503338,
+          "n": 4
+        },
+        {
+          "t": 1779506446,
+          "n": 4
+        },
+        {
+          "t": 1779509554,
+          "n": 4
+        },
+        {
+          "t": 1779512662,
+          "n": 4
+        },
+        {
+          "t": 1779515770,
+          "n": 4
+        },
+        {
+          "t": 1779518878,
+          "n": 4
+        },
+        {
+          "t": 1779521986,
+          "n": 4
+        },
+        {
+          "t": 1779525094,
+          "n": 4
+        },
+        {
+          "t": 1779528202,
+          "n": 4
+        },
+        {
+          "t": 1779531310,
+          "n": 4
+        },
+        {
+          "t": 1779534418,
+          "n": 4
+        },
+        {
+          "t": 1779537526,
+          "n": 4
+        },
+        {
+          "t": 1779540634,
+          "n": 4
+        },
+        {
+          "t": 1779543742,
+          "n": 8
+        },
+        {
+          "t": 1779546850,
+          "n": 10
+        },
+        {
+          "t": 1779549958,
+          "n": 16
+        },
+        {
+          "t": 1779553066,
+          "n": 19
+        },
+        {
+          "t": 1779556174,
+          "n": 38
+        },
+        {
+          "t": 1779559282,
+          "n": 46
+        },
+        {
+          "t": 1779562390,
+          "n": 50
+        },
+        {
+          "t": 1779565498,
+          "n": 51
+        },
+        {
+          "t": 1779568606,
+          "n": 52
+        },
+        {
+          "t": 1779571714,
+          "n": 56
+        },
+        {
+          "t": 1779574822,
+          "n": 57
+        }
+      ]
+    },
+    {
+      "sku": "M-005",
+      "name": "Fita Crédito Agrícola",
+      "category": "Sponsor",
+      "minutesToSellout": 1525,
+      "units": 53,
+      "stock": 100,
+      "stockEfficiency": 0.53,
+      "unitsPerHour": 2.09,
+      "price": 500,
+      "tokensExchanged": 17900,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779478658,
+          "n": 1
+        },
+        {
+          "t": 1779481708,
+          "n": 1
+        },
+        {
+          "t": 1779484758,
+          "n": 2
+        },
+        {
+          "t": 1779487808,
+          "n": 2
+        },
+        {
+          "t": 1779490858,
+          "n": 5
+        },
+        {
+          "t": 1779493908,
+          "n": 6
+        },
+        {
+          "t": 1779496958,
+          "n": 6
+        },
+        {
+          "t": 1779500008,
+          "n": 6
+        },
+        {
+          "t": 1779503058,
+          "n": 6
+        },
+        {
+          "t": 1779506108,
+          "n": 6
+        },
+        {
+          "t": 1779509158,
+          "n": 6
+        },
+        {
+          "t": 1779512208,
+          "n": 6
+        },
+        {
+          "t": 1779515258,
+          "n": 6
+        },
+        {
+          "t": 1779518308,
+          "n": 6
+        },
+        {
+          "t": 1779521358,
+          "n": 6
+        },
+        {
+          "t": 1779524408,
+          "n": 6
+        },
+        {
+          "t": 1779527458,
+          "n": 6
+        },
+        {
+          "t": 1779530508,
+          "n": 6
+        },
+        {
+          "t": 1779533558,
+          "n": 6
+        },
+        {
+          "t": 1779536608,
+          "n": 6
+        },
+        {
+          "t": 1779539658,
+          "n": 6
+        },
+        {
+          "t": 1779542708,
+          "n": 7
+        },
+        {
+          "t": 1779545758,
+          "n": 8
+        },
+        {
+          "t": 1779548808,
+          "n": 10
+        },
+        {
+          "t": 1779551858,
+          "n": 12
+        },
+        {
+          "t": 1779554908,
+          "n": 16
+        },
+        {
+          "t": 1779557958,
+          "n": 27
+        },
+        {
+          "t": 1779561008,
+          "n": 34
+        },
+        {
+          "t": 1779564058,
+          "n": 41
+        },
+        {
+          "t": 1779567108,
+          "n": 47
+        },
+        {
+          "t": 1779570158,
+          "n": 52
+        },
+        {
+          "t": 1779573208,
+          "n": 53
+        }
+      ]
+    },
+    {
+      "sku": "M-009",
+      "name": "Pulseira do festival",
+      "category": "Festival",
+      "minutesToSellout": 1479,
+      "units": 46,
+      "stock": 46,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 1.87,
+      "price": 500,
+      "tokensExchanged": 6400,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779478386,
+          "n": 1
+        },
+        {
+          "t": 1779481345,
+          "n": 2
+        },
+        {
+          "t": 1779484304,
+          "n": 2
+        },
+        {
+          "t": 1779487263,
+          "n": 2
+        },
+        {
+          "t": 1779490222,
+          "n": 2
+        },
+        {
+          "t": 1779493181,
+          "n": 3
+        },
+        {
+          "t": 1779496140,
+          "n": 3
+        },
+        {
+          "t": 1779499099,
+          "n": 3
+        },
+        {
+          "t": 1779502058,
+          "n": 3
+        },
+        {
+          "t": 1779505017,
+          "n": 3
+        },
+        {
+          "t": 1779507976,
+          "n": 3
+        },
+        {
+          "t": 1779510935,
+          "n": 3
+        },
+        {
+          "t": 1779513894,
+          "n": 3
+        },
+        {
+          "t": 1779516853,
+          "n": 3
+        },
+        {
+          "t": 1779519812,
+          "n": 3
+        },
+        {
+          "t": 1779522771,
+          "n": 3
+        },
+        {
+          "t": 1779525730,
+          "n": 3
+        },
+        {
+          "t": 1779528689,
+          "n": 3
+        },
+        {
+          "t": 1779531648,
+          "n": 3
+        },
+        {
+          "t": 1779534607,
+          "n": 3
+        },
+        {
+          "t": 1779537566,
+          "n": 3
+        },
+        {
+          "t": 1779540525,
+          "n": 3
+        },
+        {
+          "t": 1779543484,
+          "n": 4
+        },
+        {
+          "t": 1779546443,
+          "n": 5
+        },
+        {
+          "t": 1779549402,
+          "n": 5
+        },
+        {
+          "t": 1779552361,
+          "n": 7
+        },
+        {
+          "t": 1779555320,
+          "n": 9
+        },
+        {
+          "t": 1779558279,
+          "n": 17
+        },
+        {
+          "t": 1779561238,
+          "n": 35
+        },
+        {
+          "t": 1779564197,
+          "n": 43
+        },
+        {
+          "t": 1779567156,
+          "n": 45
+        },
+        {
+          "t": 1779570115,
+          "n": 46
+        }
+      ]
+    },
+    {
+      "sku": "M-011",
+      "name": "Lápis do município",
+      "category": "Municipal",
+      "minutesToSellout": 3430,
+      "units": 45,
+      "stock": 50,
+      "stockEfficiency": 0.9,
+      "unitsPerHour": 0.79,
+      "price": 500,
+      "tokensExchanged": 7350,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779364939,
+          "n": 1
+        },
+        {
+          "t": 1779371799,
+          "n": 1
+        },
+        {
+          "t": 1779378659,
+          "n": 1
+        },
+        {
+          "t": 1779385519,
+          "n": 1
+        },
+        {
+          "t": 1779392379,
+          "n": 1
+        },
+        {
+          "t": 1779399239,
+          "n": 1
+        },
+        {
+          "t": 1779406099,
+          "n": 1
+        },
+        {
+          "t": 1779412959,
+          "n": 1
+        },
+        {
+          "t": 1779419819,
+          "n": 1
+        },
+        {
+          "t": 1779426679,
+          "n": 1
+        },
+        {
+          "t": 1779433539,
+          "n": 1
+        },
+        {
+          "t": 1779440399,
+          "n": 1
+        },
+        {
+          "t": 1779447259,
+          "n": 1
+        },
+        {
+          "t": 1779454119,
+          "n": 1
+        },
+        {
+          "t": 1779460979,
+          "n": 1
+        },
+        {
+          "t": 1779467839,
+          "n": 1
+        },
+        {
+          "t": 1779474699,
+          "n": 1
+        },
+        {
+          "t": 1779481559,
+          "n": 2
+        },
+        {
+          "t": 1779488419,
+          "n": 2
+        },
+        {
+          "t": 1779495279,
+          "n": 2
+        },
+        {
+          "t": 1779502139,
+          "n": 2
+        },
+        {
+          "t": 1779508999,
+          "n": 2
+        },
+        {
+          "t": 1779515859,
+          "n": 2
+        },
+        {
+          "t": 1779522719,
+          "n": 2
+        },
+        {
+          "t": 1779529579,
+          "n": 2
+        },
+        {
+          "t": 1779536439,
+          "n": 2
+        },
+        {
+          "t": 1779543299,
+          "n": 4
+        },
+        {
+          "t": 1779550159,
+          "n": 4
+        },
+        {
+          "t": 1779557019,
+          "n": 23
+        },
+        {
+          "t": 1779563879,
+          "n": 36
+        },
+        {
+          "t": 1779570739,
+          "n": 44
+        },
+        {
+          "t": 1779577599,
+          "n": 45
+        }
+      ]
+    },
+    {
+      "sku": "M-010",
+      "name": "Caneta do município",
+      "category": "Municipal",
+      "minutesToSellout": 403,
+      "units": 27,
+      "stock": 50,
+      "stockEfficiency": 0.54,
+      "unitsPerHour": 4.02,
+      "price": 300,
+      "tokensExchanged": 6500,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779545011,
+          "n": 1
+        },
+        {
+          "t": 1779545818,
+          "n": 1
+        },
+        {
+          "t": 1779546625,
+          "n": 1
+        },
+        {
+          "t": 1779547432,
+          "n": 1
+        },
+        {
+          "t": 1779548239,
+          "n": 1
+        },
+        {
+          "t": 1779549046,
+          "n": 1
+        },
+        {
+          "t": 1779549853,
+          "n": 2
+        },
+        {
+          "t": 1779550660,
+          "n": 2
+        },
+        {
+          "t": 1779551467,
+          "n": 2
+        },
+        {
+          "t": 1779552274,
+          "n": 2
+        },
+        {
+          "t": 1779553081,
+          "n": 2
+        },
+        {
+          "t": 1779553888,
+          "n": 3
+        },
+        {
+          "t": 1779554695,
+          "n": 3
+        },
+        {
+          "t": 1779555502,
+          "n": 4
+        },
+        {
+          "t": 1779556309,
+          "n": 7
+        },
+        {
+          "t": 1779557116,
+          "n": 9
+        },
+        {
+          "t": 1779557923,
+          "n": 9
+        },
+        {
+          "t": 1779558730,
+          "n": 9
+        },
+        {
+          "t": 1779559537,
+          "n": 9
+        },
+        {
+          "t": 1779560344,
+          "n": 9
+        },
+        {
+          "t": 1779561151,
+          "n": 9
+        },
+        {
+          "t": 1779561958,
+          "n": 9
+        },
+        {
+          "t": 1779562765,
+          "n": 9
+        },
+        {
+          "t": 1779563572,
+          "n": 9
+        },
+        {
+          "t": 1779564379,
+          "n": 17
+        },
+        {
+          "t": 1779565186,
+          "n": 24
+        },
+        {
+          "t": 1779565993,
+          "n": 24
+        },
+        {
+          "t": 1779566800,
+          "n": 24
+        },
+        {
+          "t": 1779567607,
+          "n": 26
+        },
+        {
+          "t": 1779568414,
+          "n": 26
+        },
+        {
+          "t": 1779569221,
+          "n": 26
+        },
+        {
+          "t": 1779570028,
+          "n": 27
+        }
+      ]
+    },
+    {
+      "sku": "M-008",
+      "name": "Íman do município",
+      "category": "Municipal",
+      "minutesToSellout": 3454,
+      "units": 21,
+      "stock": 30,
+      "stockEfficiency": 0.7,
+      "unitsPerHour": 0.36,
+      "price": 300,
+      "tokensExchanged": 4425,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779365185,
+          "n": 1
+        },
+        {
+          "t": 1779372093,
+          "n": 1
+        },
+        {
+          "t": 1779379001,
+          "n": 1
+        },
+        {
+          "t": 1779385909,
+          "n": 1
+        },
+        {
+          "t": 1779392817,
+          "n": 1
+        },
+        {
+          "t": 1779399725,
+          "n": 1
+        },
+        {
+          "t": 1779406633,
+          "n": 1
+        },
+        {
+          "t": 1779413541,
+          "n": 1
+        },
+        {
+          "t": 1779420449,
+          "n": 1
+        },
+        {
+          "t": 1779427357,
+          "n": 1
+        },
+        {
+          "t": 1779434265,
+          "n": 1
+        },
+        {
+          "t": 1779441173,
+          "n": 1
+        },
+        {
+          "t": 1779448081,
+          "n": 1
+        },
+        {
+          "t": 1779454989,
+          "n": 1
+        },
+        {
+          "t": 1779461897,
+          "n": 1
+        },
+        {
+          "t": 1779468805,
+          "n": 1
+        },
+        {
+          "t": 1779475713,
+          "n": 1
+        },
+        {
+          "t": 1779482621,
+          "n": 1
+        },
+        {
+          "t": 1779489529,
+          "n": 1
+        },
+        {
+          "t": 1779496437,
+          "n": 1
+        },
+        {
+          "t": 1779503345,
+          "n": 1
+        },
+        {
+          "t": 1779510253,
+          "n": 1
+        },
+        {
+          "t": 1779517161,
+          "n": 1
+        },
+        {
+          "t": 1779524069,
+          "n": 1
+        },
+        {
+          "t": 1779530977,
+          "n": 1
+        },
+        {
+          "t": 1779537885,
+          "n": 1
+        },
+        {
+          "t": 1779544793,
+          "n": 2
+        },
+        {
+          "t": 1779551701,
+          "n": 8
+        },
+        {
+          "t": 1779558609,
+          "n": 15
+        },
+        {
+          "t": 1779565517,
+          "n": 17
+        },
+        {
+          "t": 1779572425,
+          "n": 20
+        },
+        {
+          "t": 1779579333,
+          "n": 21
+        }
+      ]
+    },
+    {
+      "sku": "M-020",
+      "name": "Iman festival da juventude",
+      "category": "Other",
+      "minutesToSellout": 112,
+      "units": 21,
+      "stock": 21,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 11.25,
+      "price": 400,
+      "tokensExchanged": 6900,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779560649,
+          "n": 1
+        },
+        {
+          "t": 1779560873,
+          "n": 5
+        },
+        {
+          "t": 1779561097,
+          "n": 5
+        },
+        {
+          "t": 1779561321,
+          "n": 5
+        },
+        {
+          "t": 1779561545,
+          "n": 5
+        },
+        {
+          "t": 1779561769,
+          "n": 5
+        },
+        {
+          "t": 1779561993,
+          "n": 5
+        },
+        {
+          "t": 1779562217,
+          "n": 6
+        },
+        {
+          "t": 1779562441,
+          "n": 6
+        },
+        {
+          "t": 1779562665,
+          "n": 6
+        },
+        {
+          "t": 1779562889,
+          "n": 7
+        },
+        {
+          "t": 1779563113,
+          "n": 7
+        },
+        {
+          "t": 1779563337,
+          "n": 7
+        },
+        {
+          "t": 1779563561,
+          "n": 7
+        },
+        {
+          "t": 1779563785,
+          "n": 9
+        },
+        {
+          "t": 1779564009,
+          "n": 13
+        },
+        {
+          "t": 1779564233,
+          "n": 15
+        },
+        {
+          "t": 1779564457,
+          "n": 15
+        },
+        {
+          "t": 1779564681,
+          "n": 16
+        },
+        {
+          "t": 1779564905,
+          "n": 16
+        },
+        {
+          "t": 1779565129,
+          "n": 16
+        },
+        {
+          "t": 1779565353,
+          "n": 16
+        },
+        {
+          "t": 1779565577,
+          "n": 16
+        },
+        {
+          "t": 1779565801,
+          "n": 16
+        },
+        {
+          "t": 1779566025,
+          "n": 16
+        },
+        {
+          "t": 1779566249,
+          "n": 16
+        },
+        {
+          "t": 1779566473,
+          "n": 16
+        },
+        {
+          "t": 1779566697,
+          "n": 16
+        },
+        {
+          "t": 1779566921,
+          "n": 18
+        },
+        {
+          "t": 1779567145,
+          "n": 18
+        },
+        {
+          "t": 1779567369,
+          "n": 20
+        },
+        {
+          "t": 1779567593,
+          "n": 21
+        }
+      ]
+    },
+    {
+      "sku": "M-006",
+      "name": "Pulseira do Oeste",
+      "category": "Festival",
+      "minutesToSellout": 455,
+      "units": 19,
+      "stock": 60,
+      "stockEfficiency": 0.317,
+      "unitsPerHour": 2.51,
+      "price": 200,
+      "tokensExchanged": 2400,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779545063,
+          "n": 1
+        },
+        {
+          "t": 1779545973,
+          "n": 1
+        },
+        {
+          "t": 1779546883,
+          "n": 1
+        },
+        {
+          "t": 1779547793,
+          "n": 1
+        },
+        {
+          "t": 1779548703,
+          "n": 1
+        },
+        {
+          "t": 1779549613,
+          "n": 1
+        },
+        {
+          "t": 1779550523,
+          "n": 2
+        },
+        {
+          "t": 1779551433,
+          "n": 2
+        },
+        {
+          "t": 1779552343,
+          "n": 2
+        },
+        {
+          "t": 1779553253,
+          "n": 3
+        },
+        {
+          "t": 1779554163,
+          "n": 6
+        },
+        {
+          "t": 1779555073,
+          "n": 6
+        },
+        {
+          "t": 1779555983,
+          "n": 7
+        },
+        {
+          "t": 1779556893,
+          "n": 8
+        },
+        {
+          "t": 1779557803,
+          "n": 8
+        },
+        {
+          "t": 1779558713,
+          "n": 9
+        },
+        {
+          "t": 1779559623,
+          "n": 10
+        },
+        {
+          "t": 1779560533,
+          "n": 10
+        },
+        {
+          "t": 1779561443,
+          "n": 11
+        },
+        {
+          "t": 1779562353,
+          "n": 13
+        },
+        {
+          "t": 1779563263,
+          "n": 13
+        },
+        {
+          "t": 1779564173,
+          "n": 14
+        },
+        {
+          "t": 1779565083,
+          "n": 14
+        },
+        {
+          "t": 1779565993,
+          "n": 14
+        },
+        {
+          "t": 1779566903,
+          "n": 14
+        },
+        {
+          "t": 1779567813,
+          "n": 14
+        },
+        {
+          "t": 1779568723,
+          "n": 14
+        },
+        {
+          "t": 1779569633,
+          "n": 14
+        },
+        {
+          "t": 1779570543,
+          "n": 16
+        },
+        {
+          "t": 1779571453,
+          "n": 17
+        },
+        {
+          "t": 1779572363,
+          "n": 17
+        },
+        {
+          "t": 1779573273,
+          "n": 19
+        }
+      ]
+    },
+    {
+      "sku": "M-018",
+      "name": "Autocolante Europeu Direct",
+      "category": "Other",
+      "minutesToSellout": 476,
+      "units": 17,
+      "stock": 21,
+      "stockEfficiency": 0.81,
+      "unitsPerHour": 2.14,
+      "price": 50,
+      "tokensExchanged": 850,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779541363,
+          "n": 1
+        },
+        {
+          "t": 1779542315,
+          "n": 1
+        },
+        {
+          "t": 1779543267,
+          "n": 3
+        },
+        {
+          "t": 1779544219,
+          "n": 3
+        },
+        {
+          "t": 1779545171,
+          "n": 4
+        },
+        {
+          "t": 1779546123,
+          "n": 4
+        },
+        {
+          "t": 1779547075,
+          "n": 4
+        },
+        {
+          "t": 1779548027,
+          "n": 4
+        },
+        {
+          "t": 1779548979,
+          "n": 4
+        },
+        {
+          "t": 1779549931,
+          "n": 4
+        },
+        {
+          "t": 1779550883,
+          "n": 6
+        },
+        {
+          "t": 1779551835,
+          "n": 6
+        },
+        {
+          "t": 1779552787,
+          "n": 6
+        },
+        {
+          "t": 1779553739,
+          "n": 7
+        },
+        {
+          "t": 1779554691,
+          "n": 7
+        },
+        {
+          "t": 1779555643,
+          "n": 7
+        },
+        {
+          "t": 1779556595,
+          "n": 7
+        },
+        {
+          "t": 1779557547,
+          "n": 7
+        },
+        {
+          "t": 1779558499,
+          "n": 7
+        },
+        {
+          "t": 1779559451,
+          "n": 7
+        },
+        {
+          "t": 1779560403,
+          "n": 7
+        },
+        {
+          "t": 1779561355,
+          "n": 7
+        },
+        {
+          "t": 1779562307,
+          "n": 7
+        },
+        {
+          "t": 1779563259,
+          "n": 7
+        },
+        {
+          "t": 1779564211,
+          "n": 7
+        },
+        {
+          "t": 1779565163,
+          "n": 9
+        },
+        {
+          "t": 1779566115,
+          "n": 13
+        },
+        {
+          "t": 1779567067,
+          "n": 13
+        },
+        {
+          "t": 1779568019,
+          "n": 16
+        },
+        {
+          "t": 1779568971,
+          "n": 16
+        },
+        {
+          "t": 1779569923,
+          "n": 16
+        },
+        {
+          "t": 1779570875,
+          "n": 17
+        }
+      ]
+    },
+    {
+      "sku": "M-013",
+      "name": "Caneta via verdr",
+      "category": "Other",
+      "minutesToSellout": 492,
+      "units": 15,
+      "stock": 15,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 1.83,
+      "price": 500,
+      "tokensExchanged": 4300,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779542830,
+          "n": 1
+        },
+        {
+          "t": 1779543814,
+          "n": 2
+        },
+        {
+          "t": 1779544798,
+          "n": 2
+        },
+        {
+          "t": 1779545782,
+          "n": 2
+        },
+        {
+          "t": 1779546766,
+          "n": 2
+        },
+        {
+          "t": 1779547750,
+          "n": 2
+        },
+        {
+          "t": 1779548734,
+          "n": 2
+        },
+        {
+          "t": 1779549718,
+          "n": 3
+        },
+        {
+          "t": 1779550702,
+          "n": 3
+        },
+        {
+          "t": 1779551686,
+          "n": 3
+        },
+        {
+          "t": 1779552670,
+          "n": 3
+        },
+        {
+          "t": 1779553654,
+          "n": 4
+        },
+        {
+          "t": 1779554638,
+          "n": 4
+        },
+        {
+          "t": 1779555622,
+          "n": 5
+        },
+        {
+          "t": 1779556606,
+          "n": 6
+        },
+        {
+          "t": 1779557590,
+          "n": 6
+        },
+        {
+          "t": 1779558574,
+          "n": 7
+        },
+        {
+          "t": 1779559558,
+          "n": 7
+        },
+        {
+          "t": 1779560542,
+          "n": 7
+        },
+        {
+          "t": 1779561526,
+          "n": 7
+        },
+        {
+          "t": 1779562510,
+          "n": 7
+        },
+        {
+          "t": 1779563494,
+          "n": 7
+        },
+        {
+          "t": 1779564478,
+          "n": 12
+        },
+        {
+          "t": 1779565462,
+          "n": 12
+        },
+        {
+          "t": 1779566446,
+          "n": 12
+        },
+        {
+          "t": 1779567430,
+          "n": 12
+        },
+        {
+          "t": 1779568414,
+          "n": 12
+        },
+        {
+          "t": 1779569398,
+          "n": 12
+        },
+        {
+          "t": 1779570382,
+          "n": 13
+        },
+        {
+          "t": 1779571366,
+          "n": 14
+        },
+        {
+          "t": 1779572350,
+          "n": 14
+        },
+        {
+          "t": 1779573334,
+          "n": 15
+        }
+      ]
+    },
+    {
+      "sku": "M-019",
+      "name": "Copo Europeu Direct",
+      "category": "Other",
+      "minutesToSellout": 112,
+      "units": 13,
+      "stock": 13,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 6.96,
+      "price": 400,
+      "tokensExchanged": 5200,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779485349,
+          "n": 1
+        },
+        {
+          "t": 1779485574,
+          "n": 1
+        },
+        {
+          "t": 1779485799,
+          "n": 1
+        },
+        {
+          "t": 1779486024,
+          "n": 1
+        },
+        {
+          "t": 1779486249,
+          "n": 1
+        },
+        {
+          "t": 1779486474,
+          "n": 1
+        },
+        {
+          "t": 1779486699,
+          "n": 1
+        },
+        {
+          "t": 1779486924,
+          "n": 1
+        },
+        {
+          "t": 1779487149,
+          "n": 1
+        },
+        {
+          "t": 1779487374,
+          "n": 1
+        },
+        {
+          "t": 1779487599,
+          "n": 2
+        },
+        {
+          "t": 1779487824,
+          "n": 3
+        },
+        {
+          "t": 1779488049,
+          "n": 3
+        },
+        {
+          "t": 1779488274,
+          "n": 3
+        },
+        {
+          "t": 1779488499,
+          "n": 3
+        },
+        {
+          "t": 1779488724,
+          "n": 3
+        },
+        {
+          "t": 1779488949,
+          "n": 3
+        },
+        {
+          "t": 1779489174,
+          "n": 4
+        },
+        {
+          "t": 1779489399,
+          "n": 7
+        },
+        {
+          "t": 1779489624,
+          "n": 7
+        },
+        {
+          "t": 1779489849,
+          "n": 9
+        },
+        {
+          "t": 1779490074,
+          "n": 9
+        },
+        {
+          "t": 1779490299,
+          "n": 10
+        },
+        {
+          "t": 1779490524,
+          "n": 10
+        },
+        {
+          "t": 1779490749,
+          "n": 11
+        },
+        {
+          "t": 1779490974,
+          "n": 11
+        },
+        {
+          "t": 1779491199,
+          "n": 11
+        },
+        {
+          "t": 1779491424,
+          "n": 11
+        },
+        {
+          "t": 1779491649,
+          "n": 12
+        },
+        {
+          "t": 1779491874,
+          "n": 12
+        },
+        {
+          "t": 1779492099,
+          "n": 12
+        },
+        {
+          "t": 1779492324,
+          "n": 13
+        }
+      ]
+    },
+    {
+      "sku": "M-012",
+      "name": "Saco Mafra",
+      "category": "Other",
+      "minutesToSellout": 303,
+      "units": 6,
+      "stock": 5,
+      "stockEfficiency": 1.2,
+      "unitsPerHour": 1.19,
+      "price": 700,
+      "tokensExchanged": 4300,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779545649,
+          "n": 1
+        },
+        {
+          "t": 1779546255,
+          "n": 1
+        },
+        {
+          "t": 1779546861,
+          "n": 1
+        },
+        {
+          "t": 1779547467,
+          "n": 1
+        },
+        {
+          "t": 1779548073,
+          "n": 1
+        },
+        {
+          "t": 1779548679,
+          "n": 1
+        },
+        {
+          "t": 1779549285,
+          "n": 1
+        },
+        {
+          "t": 1779549891,
+          "n": 1
+        },
+        {
+          "t": 1779550497,
+          "n": 1
+        },
+        {
+          "t": 1779551103,
+          "n": 1
+        },
+        {
+          "t": 1779551709,
+          "n": 1
+        },
+        {
+          "t": 1779552315,
+          "n": 1
+        },
+        {
+          "t": 1779552921,
+          "n": 1
+        },
+        {
+          "t": 1779553527,
+          "n": 1
+        },
+        {
+          "t": 1779554133,
+          "n": 1
+        },
+        {
+          "t": 1779554739,
+          "n": 2
+        },
+        {
+          "t": 1779555345,
+          "n": 2
+        },
+        {
+          "t": 1779555951,
+          "n": 2
+        },
+        {
+          "t": 1779556557,
+          "n": 2
+        },
+        {
+          "t": 1779557163,
+          "n": 4
+        },
+        {
+          "t": 1779557769,
+          "n": 4
+        },
+        {
+          "t": 1779558375,
+          "n": 4
+        },
+        {
+          "t": 1779558981,
+          "n": 4
+        },
+        {
+          "t": 1779559587,
+          "n": 4
+        },
+        {
+          "t": 1779560193,
+          "n": 4
+        },
+        {
+          "t": 1779560799,
+          "n": 4
+        },
+        {
+          "t": 1779561405,
+          "n": 4
+        },
+        {
+          "t": 1779562011,
+          "n": 4
+        },
+        {
+          "t": 1779562617,
+          "n": 4
+        },
+        {
+          "t": 1779563223,
+          "n": 4
+        },
+        {
+          "t": 1779563829,
+          "n": 5
+        },
+        {
+          "t": 1779564435,
+          "n": 6
+        }
+      ]
+    },
+    {
+      "sku": "M-015",
+      "name": "Fita Resopark",
+      "category": "Other",
+      "minutesToSellout": 269,
+      "units": 6,
+      "stock": 6,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 1.34,
+      "price": 200,
+      "tokensExchanged": 1200,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779542754,
+          "n": 1
+        },
+        {
+          "t": 1779543293,
+          "n": 1
+        },
+        {
+          "t": 1779543832,
+          "n": 1
+        },
+        {
+          "t": 1779544371,
+          "n": 1
+        },
+        {
+          "t": 1779544910,
+          "n": 1
+        },
+        {
+          "t": 1779545449,
+          "n": 2
+        },
+        {
+          "t": 1779545988,
+          "n": 3
+        },
+        {
+          "t": 1779546527,
+          "n": 3
+        },
+        {
+          "t": 1779547066,
+          "n": 3
+        },
+        {
+          "t": 1779547605,
+          "n": 3
+        },
+        {
+          "t": 1779548144,
+          "n": 3
+        },
+        {
+          "t": 1779548683,
+          "n": 3
+        },
+        {
+          "t": 1779549222,
+          "n": 3
+        },
+        {
+          "t": 1779549761,
+          "n": 3
+        },
+        {
+          "t": 1779550300,
+          "n": 3
+        },
+        {
+          "t": 1779550839,
+          "n": 3
+        },
+        {
+          "t": 1779551378,
+          "n": 3
+        },
+        {
+          "t": 1779551917,
+          "n": 3
+        },
+        {
+          "t": 1779552456,
+          "n": 3
+        },
+        {
+          "t": 1779552995,
+          "n": 3
+        },
+        {
+          "t": 1779553534,
+          "n": 3
+        },
+        {
+          "t": 1779554073,
+          "n": 3
+        },
+        {
+          "t": 1779554612,
+          "n": 3
+        },
+        {
+          "t": 1779555151,
+          "n": 3
+        },
+        {
+          "t": 1779555690,
+          "n": 4
+        },
+        {
+          "t": 1779556229,
+          "n": 5
+        },
+        {
+          "t": 1779556768,
+          "n": 5
+        },
+        {
+          "t": 1779557307,
+          "n": 5
+        },
+        {
+          "t": 1779557846,
+          "n": 5
+        },
+        {
+          "t": 1779558385,
+          "n": 5
+        },
+        {
+          "t": 1779558924,
+          "n": 5
+        },
+        {
+          "t": 1779559463,
+          "n": 6
+        }
+      ]
+    },
+    {
+      "sku": "M-017",
+      "name": "Caneta LeaderOeste",
+      "category": "Other",
+      "minutesToSellout": 286,
+      "units": 5,
+      "stock": 8,
+      "stockEfficiency": 0.625,
+      "unitsPerHour": 1.05,
+      "price": 200,
+      "tokensExchanged": 1000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779542742,
+          "n": 1
+        },
+        {
+          "t": 1779543314,
+          "n": 2
+        },
+        {
+          "t": 1779543886,
+          "n": 2
+        },
+        {
+          "t": 1779544458,
+          "n": 2
+        },
+        {
+          "t": 1779545030,
+          "n": 2
+        },
+        {
+          "t": 1779545602,
+          "n": 2
+        },
+        {
+          "t": 1779546174,
+          "n": 2
+        },
+        {
+          "t": 1779546746,
+          "n": 2
+        },
+        {
+          "t": 1779547318,
+          "n": 2
+        },
+        {
+          "t": 1779547890,
+          "n": 2
+        },
+        {
+          "t": 1779548462,
+          "n": 2
+        },
+        {
+          "t": 1779549034,
+          "n": 2
+        },
+        {
+          "t": 1779549606,
+          "n": 2
+        },
+        {
+          "t": 1779550178,
+          "n": 2
+        },
+        {
+          "t": 1779550750,
+          "n": 2
+        },
+        {
+          "t": 1779551322,
+          "n": 2
+        },
+        {
+          "t": 1779551894,
+          "n": 2
+        },
+        {
+          "t": 1779552466,
+          "n": 2
+        },
+        {
+          "t": 1779553038,
+          "n": 2
+        },
+        {
+          "t": 1779553610,
+          "n": 2
+        },
+        {
+          "t": 1779554182,
+          "n": 2
+        },
+        {
+          "t": 1779554754,
+          "n": 3
+        },
+        {
+          "t": 1779555326,
+          "n": 3
+        },
+        {
+          "t": 1779555898,
+          "n": 3
+        },
+        {
+          "t": 1779556470,
+          "n": 3
+        },
+        {
+          "t": 1779557042,
+          "n": 3
+        },
+        {
+          "t": 1779557614,
+          "n": 3
+        },
+        {
+          "t": 1779558186,
+          "n": 3
+        },
+        {
+          "t": 1779558758,
+          "n": 4
+        },
+        {
+          "t": 1779559330,
+          "n": 4
+        },
+        {
+          "t": 1779559902,
+          "n": 4
+        },
+        {
+          "t": 1779560474,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "sku": "M-014",
+      "name": "Chapéu Blockchain lab",
+      "category": "Other",
+      "minutesToSellout": 1395,
+      "units": 4,
+      "stock": 20,
+      "stockEfficiency": 0.2,
+      "unitsPerHour": 0.17,
+      "price": 3500,
+      "tokensExchanged": 14000,
+      "soldOut": false,
+      "curve": [
+        {
+          "t": 1779480138,
+          "n": 1
+        },
+        {
+          "t": 1779482928,
+          "n": 1
+        },
+        {
+          "t": 1779485718,
+          "n": 1
+        },
+        {
+          "t": 1779488508,
+          "n": 1
+        },
+        {
+          "t": 1779491298,
+          "n": 1
+        },
+        {
+          "t": 1779494088,
+          "n": 1
+        },
+        {
+          "t": 1779496878,
+          "n": 1
+        },
+        {
+          "t": 1779499668,
+          "n": 1
+        },
+        {
+          "t": 1779502458,
+          "n": 1
+        },
+        {
+          "t": 1779505248,
+          "n": 1
+        },
+        {
+          "t": 1779508038,
+          "n": 1
+        },
+        {
+          "t": 1779510828,
+          "n": 1
+        },
+        {
+          "t": 1779513618,
+          "n": 1
+        },
+        {
+          "t": 1779516408,
+          "n": 1
+        },
+        {
+          "t": 1779519198,
+          "n": 1
+        },
+        {
+          "t": 1779521988,
+          "n": 1
+        },
+        {
+          "t": 1779524778,
+          "n": 1
+        },
+        {
+          "t": 1779527568,
+          "n": 1
+        },
+        {
+          "t": 1779530358,
+          "n": 1
+        },
+        {
+          "t": 1779533148,
+          "n": 1
+        },
+        {
+          "t": 1779535938,
+          "n": 1
+        },
+        {
+          "t": 1779538728,
+          "n": 1
+        },
+        {
+          "t": 1779541518,
+          "n": 1
+        },
+        {
+          "t": 1779544308,
+          "n": 1
+        },
+        {
+          "t": 1779547098,
+          "n": 1
+        },
+        {
+          "t": 1779549888,
+          "n": 1
+        },
+        {
+          "t": 1779552678,
+          "n": 1
+        },
+        {
+          "t": 1779555468,
+          "n": 3
+        },
+        {
+          "t": 1779558258,
+          "n": 3
+        },
+        {
+          "t": 1779561048,
+          "n": 3
+        },
+        {
+          "t": 1779563838,
+          "n": 3
+        },
+        {
+          "t": 1779566628,
+          "n": 4
+        }
+      ]
+    },
+    {
+      "sku": "M-003",
+      "name": "T-shirt Festival da Juventude",
+      "category": "Apparel",
+      "minutesToSellout": 1172,
+      "units": 4,
+      "stock": 4,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 0.2,
+      "price": 3500,
+      "tokensExchanged": 14000,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779481950,
+          "n": 1
+        },
+        {
+          "t": 1779484294,
+          "n": 1
+        },
+        {
+          "t": 1779486638,
+          "n": 1
+        },
+        {
+          "t": 1779488982,
+          "n": 2
+        },
+        {
+          "t": 1779491326,
+          "n": 2
+        },
+        {
+          "t": 1779493670,
+          "n": 2
+        },
+        {
+          "t": 1779496014,
+          "n": 3
+        },
+        {
+          "t": 1779498358,
+          "n": 3
+        },
+        {
+          "t": 1779500702,
+          "n": 3
+        },
+        {
+          "t": 1779503046,
+          "n": 3
+        },
+        {
+          "t": 1779505390,
+          "n": 3
+        },
+        {
+          "t": 1779507734,
+          "n": 3
+        },
+        {
+          "t": 1779510078,
+          "n": 3
+        },
+        {
+          "t": 1779512422,
+          "n": 3
+        },
+        {
+          "t": 1779514766,
+          "n": 3
+        },
+        {
+          "t": 1779517110,
+          "n": 3
+        },
+        {
+          "t": 1779519454,
+          "n": 3
+        },
+        {
+          "t": 1779521798,
+          "n": 3
+        },
+        {
+          "t": 1779524142,
+          "n": 3
+        },
+        {
+          "t": 1779526486,
+          "n": 3
+        },
+        {
+          "t": 1779528830,
+          "n": 3
+        },
+        {
+          "t": 1779531174,
+          "n": 3
+        },
+        {
+          "t": 1779533518,
+          "n": 3
+        },
+        {
+          "t": 1779535862,
+          "n": 3
+        },
+        {
+          "t": 1779538206,
+          "n": 3
+        },
+        {
+          "t": 1779540550,
+          "n": 3
+        },
+        {
+          "t": 1779542894,
+          "n": 3
+        },
+        {
+          "t": 1779545238,
+          "n": 3
+        },
+        {
+          "t": 1779547582,
+          "n": 3
+        },
+        {
+          "t": 1779549926,
+          "n": 3
+        },
+        {
+          "t": 1779552270,
+          "n": 3
+        },
+        {
+          "t": 1779554614,
+          "n": 4
+        }
+      ]
+    },
+    {
+      "sku": "M-016",
+      "name": "Chapéu LeaderOeste",
+      "category": "Other",
+      "minutesToSellout": 80,
+      "units": 2,
+      "stock": 2,
+      "stockEfficiency": 1.0,
+      "unitsPerHour": 1.5,
+      "price": 3000,
+      "tokensExchanged": 6000,
+      "soldOut": true,
+      "curve": [
+        {
+          "t": 1779554255,
+          "n": 1
+        },
+        {
+          "t": 1779554416,
+          "n": 1
+        },
+        {
+          "t": 1779554577,
+          "n": 1
+        },
+        {
+          "t": 1779554738,
+          "n": 1
+        },
+        {
+          "t": 1779554899,
+          "n": 1
+        },
+        {
+          "t": 1779555060,
+          "n": 1
+        },
+        {
+          "t": 1779555221,
+          "n": 1
+        },
+        {
+          "t": 1779555382,
+          "n": 1
+        },
+        {
+          "t": 1779555543,
+          "n": 1
+        },
+        {
+          "t": 1779555704,
+          "n": 1
+        },
+        {
+          "t": 1779555865,
+          "n": 1
+        },
+        {
+          "t": 1779556026,
+          "n": 1
+        },
+        {
+          "t": 1779556187,
+          "n": 1
+        },
+        {
+          "t": 1779556348,
+          "n": 1
+        },
+        {
+          "t": 1779556509,
+          "n": 1
+        },
+        {
+          "t": 1779556670,
+          "n": 1
+        },
+        {
+          "t": 1779556831,
+          "n": 1
+        },
+        {
+          "t": 1779556992,
+          "n": 1
+        },
+        {
+          "t": 1779557153,
+          "n": 1
+        },
+        {
+          "t": 1779557314,
+          "n": 1
+        },
+        {
+          "t": 1779557475,
+          "n": 1
+        },
+        {
+          "t": 1779557636,
+          "n": 1
+        },
+        {
+          "t": 1779557797,
+          "n": 1
+        },
+        {
+          "t": 1779557958,
+          "n": 1
+        },
+        {
+          "t": 1779558119,
+          "n": 1
+        },
+        {
+          "t": 1779558280,
+          "n": 1
+        },
+        {
+          "t": 1779558441,
+          "n": 1
+        },
+        {
+          "t": 1779558602,
+          "n": 1
+        },
+        {
+          "t": 1779558763,
+          "n": 1
+        },
+        {
+          "t": 1779558924,
+          "n": 1
+        },
+        {
+          "t": 1779559085,
+          "n": 1
+        },
+        {
+          "t": 1779559246,
+          "n": 2
+        }
+      ]
+    }
+  ],
+  "rankScatter": [
+    {
+      "rank": 67,
+      "purchases": 4
+    },
+    {
+      "rank": 19,
+      "purchases": 1
+    },
+    {
+      "rank": 20,
+      "purchases": 5
+    },
+    {
+      "rank": 79,
+      "purchases": 1
+    },
+    {
+      "rank": 15,
+      "purchases": 6
+    },
+    {
+      "rank": 38,
+      "purchases": 7
+    },
+    {
+      "rank": 44,
+      "purchases": 3
+    },
+    {
+      "rank": 35,
+      "purchases": 10
+    },
+    {
+      "rank": 36,
+      "purchases": 11
+    },
+    {
+      "rank": 73,
+      "purchases": 1
+    },
+    {
+      "rank": 60,
+      "purchases": 3
+    },
+    {
+      "rank": 65,
+      "purchases": 3
+    },
+    {
+      "rank": 45,
+      "purchases": 5
+    },
+    {
+      "rank": 57,
+      "purchases": 4
+    },
+    {
+      "rank": 14,
+      "purchases": 21
+    },
+    {
+      "rank": 58,
+      "purchases": 4
+    },
+    {
+      "rank": 32,
+      "purchases": 3
+    },
+    {
+      "rank": 22,
+      "purchases": 6
+    },
+    {
+      "rank": 16,
+      "purchases": 12
+    },
+    {
+      "rank": 12,
+      "purchases": 13
+    },
+    {
+      "rank": 21,
+      "purchases": 11
+    },
+    {
+      "rank": 23,
+      "purchases": 14
+    },
+    {
+      "rank": 10,
+      "purchases": 15
+    },
+    {
+      "rank": 4,
+      "purchases": 5
+    },
+    {
+      "rank": 18,
+      "purchases": 6
+    },
+    {
+      "rank": 33,
+      "purchases": 1
+    },
+    {
+      "rank": 64,
+      "purchases": 3
+    },
+    {
+      "rank": 80,
+      "purchases": 2
+    },
+    {
+      "rank": 90,
+      "purchases": 2
+    },
+    {
+      "rank": 9,
+      "purchases": 4
+    },
+    {
+      "rank": 1,
+      "purchases": 17
+    },
+    {
+      "rank": 69,
+      "purchases": 5
+    },
+    {
+      "rank": 41,
+      "purchases": 10
+    },
+    {
+      "rank": 3,
+      "purchases": 8
+    },
+    {
+      "rank": 37,
+      "purchases": 10
+    },
+    {
+      "rank": 13,
+      "purchases": 17
+    },
+    {
+      "rank": 54,
+      "purchases": 1
+    },
+    {
+      "rank": 30,
+      "purchases": 4
+    },
+    {
+      "rank": 26,
+      "purchases": 6
+    },
+    {
+      "rank": 61,
+      "purchases": 8
+    },
+    {
+      "rank": 28,
+      "purchases": 12
+    },
+    {
+      "rank": 40,
+      "purchases": 4
+    },
+    {
+      "rank": 39,
+      "purchases": 4
+    },
+    {
+      "rank": 42,
+      "purchases": 11
+    },
+    {
+      "rank": 27,
+      "purchases": 16
+    },
+    {
+      "rank": 82,
+      "purchases": 2
+    },
+    {
+      "rank": 6,
+      "purchases": 9
+    },
+    {
+      "rank": 5,
+      "purchases": 9
+    },
+    {
+      "rank": 7,
+      "purchases": 7
+    },
+    {
+      "rank": 17,
+      "purchases": 4
+    },
+    {
+      "rank": 53,
+      "purchases": 10
+    },
+    {
+      "rank": 48,
+      "purchases": 7
+    },
+    {
+      "rank": 83,
+      "purchases": 2
+    },
+    {
+      "rank": 11,
+      "purchases": 2
+    },
+    {
+      "rank": 34,
+      "purchases": 5
+    },
+    {
+      "rank": 31,
+      "purchases": 4
+    },
+    {
+      "rank": 91,
+      "purchases": 1
+    },
+    {
+      "rank": 46,
+      "purchases": 4
+    },
+    {
+      "rank": 84,
+      "purchases": 1
+    },
+    {
+      "rank": 107,
+      "purchases": 1
+    },
+    {
+      "rank": 92,
+      "purchases": 1
+    },
+    {
+      "rank": 75,
+      "purchases": 2
+    },
+    {
+      "rank": 88,
+      "purchases": 1
+    },
+    {
+      "rank": 89,
+      "purchases": 1
+    },
+    {
+      "rank": 94,
+      "purchases": 1
+    },
+    {
+      "rank": 93,
+      "purchases": 1
+    },
+    {
+      "rank": 95,
+      "purchases": 1
+    },
+    {
+      "rank": 96,
+      "purchases": 1
+    },
+    {
+      "rank": 59,
+      "purchases": 4
+    },
+    {
+      "rank": 68,
+      "purchases": 3
+    },
+    {
+      "rank": 97,
+      "purchases": 1
+    },
+    {
+      "rank": 99,
+      "purchases": 1
+    },
+    {
+      "rank": 98,
+      "purchases": 1
+    },
+    {
+      "rank": 100,
+      "purchases": 1
+    },
+    {
+      "rank": 101,
+      "purchases": 1
+    },
+    {
+      "rank": 102,
+      "purchases": 1
+    },
+    {
+      "rank": 24,
+      "purchases": 1
+    },
+    {
+      "rank": 103,
+      "purchases": 1
+    },
+    {
+      "rank": 71,
+      "purchases": 1
+    },
+    {
+      "rank": 104,
+      "purchases": 1
+    },
+    {
+      "rank": 25,
+      "purchases": 2
+    },
+    {
+      "rank": 81,
+      "purchases": 1
+    },
+    {
+      "rank": 76,
+      "purchases": 2
+    },
+    {
+      "rank": 29,
+      "purchases": 1
+    },
+    {
+      "rank": 63,
+      "purchases": 2
+    }
+  ],
+  "topMerchBuyers": [
+    {
+      "user": "Lucas",
+      "buys": 21
+    },
+    {
+      "user": "Francisco",
+      "buys": 17
+    },
+    {
+      "user": "Leonardo Lucas e DC",
+      "buys": 17
+    },
+    {
+      "user": "Diana",
+      "buys": 16
+    },
+    {
+      "user": "Santiago",
+      "buys": 15
+    },
+    {
+      "user": "Salvador",
+      "buys": 14
+    },
+    {
+      "user": "Paulo",
+      "buys": 13
+    },
+    {
+      "user": "Bruna",
+      "buys": 12
+    },
+    {
+      "user": "Carlos19__mvs",
+      "buys": 12
+    },
+    {
+      "user": "Carolfg",
+      "buys": 11
+    }
+  ],
+  "topHiders": [
+    {
+      "rank": 1,
+      "owner": "Carol",
+      "ownerAddress": "0x4261e6d6cf4cfcdbe33e448c813c74d780a28842",
+      "tags": 1,
+      "finds": 56
+    },
+    {
+      "rank": 2,
+      "owner": "Diana Dias",
+      "ownerAddress": "0x4f9e4a62db9d0cfbd57de5f216717efd5c4237b8",
+      "tags": 1,
+      "finds": 48
+    },
+    {
+      "rank": 3,
+      "owner": "Matt1830",
+      "ownerAddress": "0xbbc8434771169eb6bb1b51d6e3877d7a5ee5f161",
+      "tags": 1,
+      "finds": 39
+    },
+    {
+      "rank": 4,
+      "owner": "Carlos19__mvs",
+      "ownerAddress": "0x23f43eabbf3c77c8c9b2cac6470e4dcf6bf88d17",
+      "tags": 1,
+      "finds": 37
+    },
+    {
+      "rank": 5,
+      "owner": "camila",
+      "ownerAddress": "0x0e6f3a106c516223b305a475f397e3b4e08881b7",
+      "tags": 1,
+      "finds": 37
+    },
+    {
+      "rank": 6,
+      "owner": "Abelhas",
+      "ownerAddress": "0xa7c588df4bc9ddbd992d24fd94fc641dab922274",
+      "tags": 1,
+      "finds": 29
+    },
+    {
+      "rank": 7,
+      "owner": "Anabela",
+      "ownerAddress": "0xbe17ce90375aeb14231450e0123b29393055fcd0",
+      "tags": 1,
+      "finds": 27
+    },
+    {
+      "rank": 8,
+      "owner": "Micael",
+      "ownerAddress": "0x17e8e6c0e13a999ec260551d9ab6cbb542676973",
+      "tags": 1,
+      "finds": 27
+    },
+    {
+      "rank": 9,
+      "owner": "Neno",
+      "ownerAddress": "0x32c6d2cacbe7d11e48d73ebb714a4a31373d3f3d",
+      "tags": 1,
+      "finds": 27
+    },
+    {
+      "rank": 10,
+      "owner": "Simao",
+      "ownerAddress": "0x7fe4bad24cad8947084287360148d32a6749c231",
+      "tags": 1,
+      "finds": 25
+    },
+    {
+      "rank": 11,
+      "owner": "2550",
+      "ownerAddress": "0x91ad5a991befa27767fb0040a502e14378aef742",
+      "tags": 1,
+      "finds": 20
+    },
+    {
+      "rank": 12,
+      "owner": "Carolfg",
+      "ownerAddress": "0xcb547ad10f637542427427047d01dcd5a071ca59",
+      "tags": 1,
+      "finds": 20
+    },
+    {
+      "rank": 13,
+      "owner": "Francisco",
+      "ownerAddress": "0xe263e7eb0bc31ab26d7cd40a692e7b8896caba02",
+      "tags": 1,
+      "finds": 20
+    },
+    {
+      "rank": 14,
+      "owner": "Laura F",
+      "ownerAddress": "0xa28aa31061ee50e41bb24346b05c59de14af2ccd",
+      "tags": 1,
+      "finds": 17
+    },
+    {
+      "rank": 15,
+      "owner": "Marisa",
+      "ownerAddress": "0x33a808e234e5cd2ad70d9ca3d3ecde3016f5db19",
+      "tags": 1,
+      "finds": 9
+    },
+    {
+      "rank": 16,
+      "owner": "Lucas",
+      "ownerAddress": "0xf98673b75ca4484a7db0570ecfb80a6884606376",
+      "tags": 1,
+      "finds": 6
+    },
+    {
+      "rank": 17,
+      "owner": "Beatrizzzeee",
+      "ownerAddress": "0xa2c9ef772a859acc22230091647e700c2912df3c",
+      "tags": 1,
+      "finds": 6
+    },
+    {
+      "rank": 18,
+      "owner": "L123",
+      "ownerAddress": "0x7ac8ce426713bdfffae6822ca4326f2a5cda90ea",
+      "tags": 1,
+      "finds": 5
+    }
+  ],
+  "topFinders": [
+    {
+      "rank": 1,
+      "user": "Francisco",
+      "userAddress": "0xe263e7eb0bc31ab26d7cd40a692e7b8896caba02",
+      "finds": 56,
+      "tokens": 6100
+    },
+    {
+      "rank": 2,
+      "user": "Piratas",
+      "userAddress": "0x60a4b4d32c6b8719ac12fe8495cdc6781719533c",
+      "finds": 51,
+      "tokens": 5100
+    },
+    {
+      "rank": 3,
+      "user": "Matt1830",
+      "userAddress": "0xbbc8434771169eb6bb1b51d6e3877d7a5ee5f161",
+      "finds": 49,
+      "tokens": 5300
+    },
+    {
+      "rank": 4,
+      "user": "L123",
+      "userAddress": "0x7ac8ce426713bdfffae6822ca4326f2a5cda90ea",
+      "finds": 48,
+      "tokens": 5300
+    },
+    {
+      "rank": 5,
+      "user": "chefmike",
+      "userAddress": "0x511fefb83e08ad15b18680ec2454be175f87e6f1",
+      "finds": 46,
+      "tokens": 4700
+    },
+    {
+      "rank": 6,
+      "user": "Santiago",
+      "userAddress": "0x306c905e238e42cf8f5749fc2a805fef37102809",
+      "finds": 46,
+      "tokens": 4600
+    },
+    {
+      "rank": 7,
+      "user": "Neno",
+      "userAddress": "0x32c6d2cacbe7d11e48d73ebb714a4a31373d3f3d",
+      "finds": 45,
+      "tokens": 4900
+    },
+    {
+      "rank": 8,
+      "user": "Anabela",
+      "userAddress": "0xbe17ce90375aeb14231450e0123b29393055fcd0",
+      "finds": 44,
+      "tokens": 4800
+    },
+    {
+      "rank": 9,
+      "user": "Leonardo Lucas e DC",
+      "userAddress": "0x56db58468c6f2ea49c93dc9b141a883e96eb799f",
+      "finds": 44,
+      "tokens": 4400
+    },
+    {
+      "rank": 10,
+      "user": "Paulo",
+      "userAddress": "0x83c4b4bcf5be9aff52106bc066b15df1cd412464",
+      "finds": 44,
+      "tokens": 4400
+    },
+    {
+      "rank": 11,
+      "user": "Simao",
+      "userAddress": "0x7fe4bad24cad8947084287360148d32a6749c231",
+      "finds": 43,
+      "tokens": 4800
+    },
+    {
+      "rank": 12,
+      "user": "Diana Dias",
+      "userAddress": "0x4f9e4a62db9d0cfbd57de5f216717efd5c4237b8",
+      "finds": 42,
+      "tokens": 4700
+    },
+    {
+      "rank": 13,
+      "user": "Brian17",
+      "userAddress": "0x05c583fe586c5ae4b52a4f9a96ba6c0ab12ff3ef",
+      "finds": 42,
+      "tokens": 4200
+    },
+    {
+      "rank": 14,
+      "user": "Bruna",
+      "userAddress": "0x449dd17ed6cd42bfca45fd8801c32715b68d91b3",
+      "finds": 42,
+      "tokens": 4200
+    },
+    {
+      "rank": 15,
+      "user": "Jose",
+      "userAddress": "0x42664f411798739d76c66ac374138da2140e9dcd",
+      "finds": 42,
+      "tokens": 4200
+    },
+    {
+      "rank": 16,
+      "user": "camila",
+      "userAddress": "0x0e6f3a106c516223b305a475f397e3b4e08881b7",
+      "finds": 41,
+      "tokens": 4500
+    },
+    {
+      "rank": 17,
+      "user": "Madalena-Ana",
+      "userAddress": "0xcdb42af5ee61b8a9a0298f1e21cbf41d27ee2615",
+      "finds": 41,
+      "tokens": 4100
+    },
+    {
+      "rank": 18,
+      "user": "Angela",
+      "userAddress": "0xafc5f1b3dbde6eecf141385cba0c53cc3be06669",
+      "finds": 40,
+      "tokens": 4100
+    },
+    {
+      "rank": 19,
+      "user": "Gaby",
+      "userAddress": "0x090357785bc1a0e095e732ae091ce0832dad8a31",
+      "finds": 40,
+      "tokens": 4000
+    },
+    {
+      "rank": 20,
+      "user": "Rayssa",
+      "userAddress": "0xc3c7d68372eca5f09d7cfbe19ee52f2f6bfc543c",
+      "finds": 40,
+      "tokens": 4000
+    },
+    {
+      "rank": 21,
+      "user": "Lucas",
+      "userAddress": "0xf98673b75ca4484a7db0570ecfb80a6884606376",
+      "finds": 39,
+      "tokens": 4300
+    },
+    {
+      "rank": 22,
+      "user": "Salvador",
+      "userAddress": "0x6b43d8e54fa2de704dc96c99d292e9f5c72a9496",
+      "finds": 39,
+      "tokens": 3900
+    },
+    {
+      "rank": 23,
+      "user": "Moguel",
+      "userAddress": "0x1c16aa77f6cd151635e0123716420e0f9a911424",
+      "finds": 38,
+      "tokens": 3900
+    },
+    {
+      "rank": 24,
+      "user": "J123",
+      "userAddress": "0x36861de0f2bed83f9b3336a51ea1bb0a404d0301",
+      "finds": 36,
+      "tokens": 3700
+    },
+    {
+      "rank": 25,
+      "user": "Micael",
+      "userAddress": "0x17e8e6c0e13a999ec260551d9ab6cbb542676973",
+      "finds": 35,
+      "tokens": 3900
+    },
+    {
+      "rank": 26,
+      "user": "Diana",
+      "userAddress": "0x3c273975bca552172ce389b46d3f36b5adc59476",
+      "finds": 35,
+      "tokens": 3500
+    },
+    {
+      "rank": 27,
+      "user": "Tiago",
+      "userAddress": "0x1725174470439dcb8c7b5db470ebc0102a5b7cae",
+      "finds": 34,
+      "tokens": 3500
+    },
+    {
+      "rank": 28,
+      "user": "Jogo",
+      "userAddress": "0xa1ec5db8d54822d59615a40233ccc5c2669950f5",
+      "finds": 32,
+      "tokens": 3200
+    },
+    {
+      "rank": 29,
+      "user": "Carlos19__mvs",
+      "userAddress": "0x23f43eabbf3c77c8c9b2cac6470e4dcf6bf88d17",
+      "finds": 31,
+      "tokens": 3500
+    },
+    {
+      "rank": 30,
+      "user": "Madaflo22",
+      "userAddress": "0xb16332a5583eb88d495116fe982d5314d4a0b4d8",
+      "finds": 31,
+      "tokens": 3100
+    },
+    {
+      "rank": 31,
+      "user": "Abelhas",
+      "userAddress": "0xa7c588df4bc9ddbd992d24fd94fc641dab922274",
+      "finds": 30,
+      "tokens": 3500
+    },
+    {
+      "rank": 32,
+      "user": "Ricardo",
+      "userAddress": "0x943df3a255eabeeaef26d23b42de5cb064763833",
+      "finds": 28,
+      "tokens": 2800
+    },
+    {
+      "rank": 33,
+      "user": "Mariana Francisca",
+      "userAddress": "0xbcc0f635d7e7fb86a1ad119a58560e62d0c7706b",
+      "finds": 27,
+      "tokens": 2800
+    },
+    {
+      "rank": 34,
+      "user": "Marisa",
+      "userAddress": "0x33a808e234e5cd2ad70d9ca3d3ecde3016f5db19",
+      "finds": 26,
+      "tokens": 3000
+    },
+    {
+      "rank": 35,
+      "user": "Filipe",
+      "userAddress": "0x8355344677ee2b1e8cf6e7bf38f1c0765f4ec21a",
+      "finds": 26,
+      "tokens": 2600
+    },
+    {
+      "rank": 36,
+      "user": "Ferrreiras",
+      "userAddress": "0x212239921f6adb82d67fe38c9e918fa5f498288d",
+      "finds": 25,
+      "tokens": 2500
+    },
+    {
+      "rank": 37,
+      "user": "Bruno_ferreira",
+      "userAddress": "0x43594459d5bff22031339c40e16ad6f73d99b0f5",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 38,
+      "user": "NevesPeniche",
+      "userAddress": "0xf159ee41fadab2c74ff405e8f8c1a3f32b531617",
+      "finds": 24,
+      "tokens": 2400
+    },
+    {
+      "rank": 39,
+      "user": "Carolfg",
+      "userAddress": "0xcb547ad10f637542427427047d01dcd5a071ca59",
+      "finds": 23,
+      "tokens": 2700
+    },
+    {
+      "rank": 40,
+      "user": "2550",
+      "userAddress": "0x91ad5a991befa27767fb0040a502e14378aef742",
+      "finds": 23,
+      "tokens": 2700
+    },
+    {
+      "rank": 41,
+      "user": "R.Neto9",
+      "userAddress": "0x60d5c18be3918ba715e8fd4dab61a91af5214c73",
+      "finds": 22,
+      "tokens": 2300
+    },
+    {
+      "rank": 42,
+      "user": "Idedd",
+      "userAddress": "0xffb3fe88e057413b9c3dab63d702eb968e493cf2",
+      "finds": 22,
+      "tokens": 2200
+    },
+    {
+      "rank": 43,
+      "user": "Laura F",
+      "userAddress": "0xa28aa31061ee50e41bb24346b05c59de14af2ccd",
+      "finds": 21,
+      "tokens": 2500
+    },
+    {
+      "rank": 44,
+      "user": "Beatrizzzeee",
+      "userAddress": "0xa2c9ef772a859acc22230091647e700c2912df3c",
+      "finds": 21,
+      "tokens": 2500
+    },
+    {
+      "rank": 45,
+      "user": "Talys",
+      "userAddress": "0xa513e8f0dbb4b96ecea8efa6726eb547f7c477e1",
+      "finds": 21,
+      "tokens": 2100
+    },
+    {
+      "rank": 46,
+      "user": "ines felix",
+      "userAddress": "0x75e5e0910c1e19586f7c4cf3bc3352bcb9193e93",
+      "finds": 18,
+      "tokens": 1800
+    },
+    {
+      "rank": 47,
+      "user": "David",
+      "userAddress": "0xb8929bf9a9daba47540d4993b53838ed0fb62e4c",
+      "finds": 17,
+      "tokens": 1700
+    },
+    {
+      "rank": 48,
+      "user": "Manf",
+      "userAddress": "0x8a40ace94b1c432e94b7f2049f52cd0a8f89b609",
+      "finds": 17,
+      "tokens": 1700
+    },
+    {
+      "rank": 49,
+      "user": "Juliamota",
+      "userAddress": "0xd38f2573a5ed59246776cfbe2afa946dba1e8f28",
+      "finds": 17,
+      "tokens": 1700
+    },
+    {
+      "rank": 50,
+      "user": "sofia e lucas",
+      "userAddress": "0x4d64f15b1f950d54f50f036ca045a7c32a482b26",
+      "finds": 17,
+      "tokens": 1700
+    }
+  ],
+  "socials": [
+    {
+      "platform": "instagram",
+      "claims": 2
+    },
+    {
+      "platform": "linkedin",
+      "claims": 1
+    }
+  ],
+  "hotspots": {
+    "points": [
+      {
+        "x": 0.3274,
+        "y": 0.5287,
+        "w": 108
+      },
+      {
+        "x": 0.3471,
+        "y": 0.5224,
+        "w": 99
+      },
+      {
+        "x": 0.3653,
+        "y": 0.4548,
+        "w": 87
+      },
+      {
+        "x": 0.5636,
+        "y": 0.2919,
+        "w": 61
+      },
+      {
+        "x": 0.2957,
+        "y": 0.5031,
+        "w": 58
+      },
+      {
+        "x": 0.3152,
+        "y": 0.42210000000000003,
+        "w": 56
+      },
+      {
+        "x": 0.6008,
+        "y": 0.5935,
+        "w": 55
+      },
+      {
+        "x": 0.7337,
+        "y": 0.4936,
+        "w": 54
+      },
+      {
+        "x": 0.33039999999999997,
+        "y": 0.36729999999999996,
+        "w": 51
+      },
+      {
+        "x": 0.1247,
+        "y": 0.5036999999999999,
+        "w": 50
+      },
+      {
+        "x": 0.8038,
+        "y": 0.4836,
+        "w": 49
+      },
+      {
+        "x": 0.2693,
+        "y": 0.5029,
+        "w": 48
+      },
+      {
+        "x": 0.2718,
+        "y": 0.7089,
+        "w": 48
+      },
+      {
+        "x": 0.5663,
+        "y": 0.6013000000000001,
+        "w": 46
+      },
+      {
+        "x": 0.6188,
+        "y": 0.3268,
+        "w": 46
+      },
+      {
+        "x": 0.32520000000000004,
+        "y": 0.4508,
+        "w": 45
+      },
+      {
+        "x": 0.0974,
+        "y": 0.8986,
+        "w": 45
+      },
+      {
+        "x": 0.6667000000000001,
+        "y": 0.5145000000000001,
+        "w": 44
+      },
+      {
+        "x": 0.7126,
+        "y": 0.501,
+        "w": 43
+      },
+      {
+        "x": 0.45840000000000003,
+        "y": 0.28550000000000003,
+        "w": 43
+      },
+      {
+        "x": 0.4727,
+        "y": 0.3347,
+        "w": 43
+      },
+      {
+        "x": 0.1376,
+        "y": 0.4413,
+        "w": 42
+      },
+      {
+        "x": 0.5,
+        "y": 0.5386,
+        "w": 42
+      },
+      {
+        "x": 0.0663,
+        "y": 0.267,
+        "w": 42
+      },
+      {
+        "x": 0.7556999999999999,
+        "y": 0.6992,
+        "w": 41
+      },
+      {
+        "x": 0.48590000000000005,
+        "y": 0.5517,
+        "w": 39
+      },
+      {
+        "x": 0.32520000000000004,
+        "y": 0.37579999999999997,
+        "w": 39
+      },
+      {
+        "x": 0.1437,
+        "y": 0.2917,
+        "w": 38
+      },
+      {
+        "x": 0.44179999999999997,
+        "y": 0.5022,
+        "w": 38
+      },
+      {
+        "x": 0.2799,
+        "y": 0.7625,
+        "w": 37
+      },
+      {
+        "x": 0.2569,
+        "y": 0.3873,
+        "w": 37
+      },
+      {
+        "x": 0.2812,
+        "y": 0.3921,
+        "w": 37
+      },
+      {
+        "x": 0.6431,
+        "y": 0.5854,
+        "w": 36
+      },
+      {
+        "x": 0.08410000000000001,
+        "y": 0.36479999999999996,
+        "w": 35
+      },
+      {
+        "x": 0.2354,
+        "y": 0.6531999999999999,
+        "w": 34
+      },
+      {
+        "x": 0.1278,
+        "y": 0.0045000000000000005,
+        "w": 34
+      },
+      {
+        "x": 0.2391,
+        "y": 0.5179,
+        "w": 34
+      },
+      {
+        "x": 0.0725,
+        "y": 0.17370000000000002,
+        "w": 31
+      },
+      {
+        "x": 0.3368,
+        "y": 0.6585,
+        "w": 31
+      },
+      {
+        "x": 0.7241,
+        "y": 0.598,
+        "w": 29
+      },
+      {
+        "x": 0.5106,
+        "y": 0.6512,
+        "w": 28
+      },
+      {
+        "x": 0.19649999999999998,
+        "y": 0.5325,
+        "w": 27
+      },
+      {
+        "x": 0.1565,
+        "y": 0.4379,
+        "w": 27
+      },
+      {
+        "x": 0.35009999999999997,
+        "y": 0.7293000000000001,
+        "w": 27
+      },
+      {
+        "x": 0.4413,
+        "y": 0.69,
+        "w": 26
+      },
+      {
+        "x": 0.3218,
+        "y": 0.7726000000000001,
+        "w": 25
+      },
+      {
+        "x": 0.5507,
+        "y": 0.48350000000000004,
+        "w": 22
+      },
+      {
+        "x": 0.21109999999999998,
+        "y": 0.2861,
+        "w": 20
+      },
+      {
+        "x": 0.2913,
+        "y": 0.2205,
+        "w": 20
+      },
+      {
+        "x": 0.055999999999999994,
+        "y": 0.7565000000000001,
+        "w": 20
+      },
+      {
+        "x": 0.2969,
+        "y": 0.1445,
+        "w": 17
+      },
+      {
+        "x": 0.48869999999999997,
+        "y": 0.4915,
+        "w": 14
+      },
+      {
+        "x": 0.3195,
+        "y": 0.3699,
+        "w": 9
+      },
+      {
+        "x": 0.6451,
+        "y": 0.49770000000000003,
+        "w": 8
+      },
+      {
+        "x": 0.2729,
+        "y": 0.3834,
+        "w": 6
+      },
+      {
+        "x": 0.4213,
+        "y": 0.4621,
+        "w": 6
+      },
+      {
+        "x": 0.23670000000000002,
+        "y": 0.8111,
+        "w": 5
+      }
+    ]
+  },
+  "hourGrid": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.003,
+      0.012,
+      0.009,
+      0.357,
+      0.676,
+      0.408,
+      0.47
+    ],
+    [
+      0.208,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.012,
+      0.018,
+      0.009,
+      0.161,
+      0.39,
+      0.485,
+      0.586,
+      0.643,
+      0.893,
+      1.0,
+      0.56,
+      0.595,
+      0.253,
+      0.024
+    ]
+  ],
+  "hourGridAbs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      4,
+      3,
+      120,
+      227,
+      137,
+      158
+    ],
+    [
+      70,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      6,
+      3,
+      54,
+      131,
+      163,
+      197,
+      216,
+      300,
+      336,
+      188,
+      200,
+      85,
+      8
+    ]
+  ],
+  "eventDays": [
+    "2026-05-22",
+    "2026-05-23"
+  ],
+  "reportsFiled": 3,
+  "chain": {
+    "network": "Nova Cidade Testnet",
+    "contract": "0xb20161322d75c7c84e35d6abc2a29263edc52f87",
+    "tokenAddress": "0xb20161322d75c7c84e35d6abc2a29263edc52f87",
+    "explorer": "https://testnet.explorer.novaims.unl.pt",
+    "snapshotISO": "2026-05-25T20:05:10Z",
+    "blockHeight": 49566,
+    "entryPoint": "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+    "bundler": "https://testnet.novaims.unl.pt/bundler/"
+  }
+}
