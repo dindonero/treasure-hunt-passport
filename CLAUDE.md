@@ -1,18 +1,61 @@
-# Treasure Hunt — ETHGlobal Lisbon 2026 Edition (Continuity Track)
+# Treasure Hunt Passport (ETHGlobal Mumbai 2026, continuity track)
 
-Individual-player NFC treasure hunt. This repo is the ETHGlobal Lisbon 2026
-continuity-track fork of the Cadaval edition (`treasure-hunt-cadaval`, itself
-forked from `treasure-hunt-smartcitiessummit`, NFC-only feature set: no polls,
-no QR codes, no stages, no reward boosts). The initial commit + `pre-hackathon`
-tag mark the pre-event baseline; all hackathon work (World ID, ENS, Sui/Walrus
-integrations) lands after it in granular commits. Repo is private until
-submission, then flipped public — nothing confidential may be committed here.
+Individual-player NFC treasure hunt plus a **player passport on Arkiv**: one
+passport per player and one readonly badge per (player, edition), so a player's
+history and encrypted profile photo follow them between editions that each have
+their own database. Built at ETHGlobal Mumbai (5 to 7 Nov 2026). Submission
+deadline Sat 7 Nov 09:00 IST.
 
-Hackathon repo hygiene (ETHGlobal rules): never squash; commit incrementally;
-keep README's "What existed before / what was built here" section current;
-weekend work must be open source at submission. Cadaval event branding/assets
-are placeholders to swap during the event. Venue / programme / exhibitor
-metadata is event-agnostic — fill in via the admin UI.
+Base: the Lisbon repo's baseline commit `46673c5` only (tag `pre-hackathon`),
+none of the Lisbon World/ENS/Sui commits (deliberately not exposed), plus the
+Neon layer `6ca48cb` (existing code). The rest of this file below "Project
+structure" is the Cadaval-era guide and still describes the app; where it says
+Supabase, read Neon through the supabase-js shim in `lib/db.ts`.
+
+Hackathon hygiene: never squash, commit in small steps, keep README's
+"What existed before / What was built" current, AI use disclosed in README.
+Repo must be public at submission (MIT, `LICENSE`).
+
+## Passport (the hackathon work)
+
+| File | Role |
+|---|---|
+| `lib/arkiv.ts` | Schemas `treasurehunt.passport` / `treasurehunt.badge`, reads (always `createdBy(issuer)`), `issueBadge` (one batch tx), `setPhoto`, `clearPhoto`. No `@/` imports, so the check script can load it |
+| `lib/photo.ts` | AES-256-GCM, landing key client (`sha256=` HMAC in `x-th-relay-signature`, body has `ts`), Swarm upload/download (default: public gateway `api.gateway.ethswarm.org`, no batch needed) |
+| `app/api/passport/*` | `GET` passport+badges; `badge` POST (checks `claimedRewards` on-chain first); `photo` GET/POST/DELETE (owner only) |
+| `app/passport/` | The page; bottom nav slot replaced Home |
+| `landing/photo-key-route.ts` | Copy of `treasure-hunt-landing/app/api/photo-key/route.ts` (deployed there). Excluded from tsconfig |
+| `scripts/test-passport.mjs` | `node --env-file=.env.arkiv-issuer scripts/test-passport.mjs`: offline crypto asserts, then a testnet round trip that cleans up after itself. `/scripts/*` is ignored except this file |
+| `arkiv/*.md` | Arkiv judging files (drafts with team TODOs) |
+
+Photo keys: the landing derives `HMAC(PHOTO_MASTER_KEY, player:nonce)` and for
+`read` only answers if the nonce equals the passport's current `photoNonce` on
+Arkiv. `PHOTO_MASTER_KEY` exists only as a Sensitive env var on the landing
+project; losing it makes every stored photo unreadable.
+
+## Deployment (two demo editions)
+
+| | mumbai1 | mumbai2 |
+|---|---|---|
+| URL | https://mumbai1.treasurehunt.pt | https://mumbai2.treasurehunt.pt |
+| Vercel project (nova-blockchain-lab) | `treasure-hunt-mumbai1` `prj_vSmIjQfPj0sCXEEDz3H4v68FT9Ww` | `treasure-hunt-mumbai2` `prj_tjqkUPm5yCKkv7a5L1F9MCGu0DaT` |
+| Neon (Vercel integration, fra1) | `treasure-hunt-mumbai1-db` | `treasure-hunt-mumbai2-db` |
+| Contract (Nova Cidade) | `0x745F941759A223a3Ec6DBd4e96291A2633127415` block 134222 | `0x3111bDbF59E49dcF8Ff819fbe4C00cf5D0052842` block 134223 |
+
+- Deploy without Git integration: `VERCEL_ORG_ID=team_CQz61ggf0OqA8z9hRzruzspm VERCEL_PROJECT_ID=<id> vercel deploy --prod --yes`
+  from the repo root. `vercel.json` must keep `"framework": "nextjs"` (CLI-created
+  projects have no preset and otherwise serve 404 everywhere).
+- `.vercelignore` keeps `.env*` and `/contracts` out of uploads (`/contracts` with
+  the slash, or `lib/contracts` is dropped too).
+- DNS: A records `mumbai1`/`mumbai2` → `76.76.21.21` in Cloudflare (DNS only).
+  API token in `~/Desktop/threpos/.cloudflare.env`.
+- Paymaster: both `/api/config/active-contract` URLs are in `TREASURE_HUNT_URLS`
+  on urbanlab (backup `paymaster-proxy.js.bak-2026-11-06-mumbai`).
+- DBs were bootstrapped with the schema, the 17 admin wallets copied from Devcon,
+  and the active `contract_deployments` row.
+- Arkiv issuer: `0x2e246E61039Eb470aBFf1E20E71D414756Af5a0e`; key and access key
+  in `.env.arkiv-issuer` (gitignored) and on both Vercel projects. Hub login is
+  wallet-only; access key and faucet need a human captcha click.
 
 ## Project structure
 
