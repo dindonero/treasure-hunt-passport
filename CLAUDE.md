@@ -41,7 +41,10 @@ project; losing it makes every stored photo unreadable.
   i18n. Balance pill opens a menu (Store, Tags found, Ranking); wallet pill opens
   the account menu (name, sign-in method, address copy, Passport, explorer, sign
   out). The "Set name" button is gone; players set a handle after their first
-  find (tag page) or on the leaderboard (`components/username-form.tsx`).
+  find (tag page) or on the leaderboard (`components/username-form.tsx`). Saving a
+  name also writes it to the Arkiv passport (`setHandle` in `lib/arkiv.ts`, run with
+  `after()` in `/api/auth/set-username`), so other editions show it; the photo patch
+  carries it too. Another edition's own DB still has no name, so its tag page asks again.
 - **"Hide your own tag" is removed:** no player ownership of tags. Deleted the
   gate modal, the own-tag sheet, `claim-ownership`/`unclaim-ownership`/
   `owns-any-tag`/`user-tag-status`/`user-objects` routes, the home CTA, the
@@ -69,7 +72,12 @@ project; losing it makes every stored photo unreadable.
 
 - Deploy without Git integration: `VERCEL_ORG_ID=team_CQz61ggf0OqA8z9hRzruzspm VERCEL_PROJECT_ID=<id> vercel deploy --prod --yes`
   from the repo root. `vercel.json` must keep `"framework": "nextjs"` (CLI-created
-  projects have no preset and otherwise serve 404 everywhere).
+  projects have no preset and otherwise serve 404 everywhere). It also holds the
+  leaderboard cron (`*/5`); the Lisbon baseline had none, so it was added on 6 Nov.
+  `CRON_SECRET` is a Sensitive var: `vercel env run` sees it empty, so trigger the
+  sync by hand only from the Vercel dashboard.
+- Demo tags added for the recorded demo (6 Nov): mumbai1 "Art Gallery", "Swag
+  Station" and one blank tag; mumbai2 "Jasmine Stage 4". The team's "Teste…" tags are theirs.
 - `.vercelignore` keeps `.env*` and `/contracts` out of uploads (`/contracts` with
   the slash, or `lib/contracts` is dropped too).
 - DNS: A records `mumbai1`/`mumbai2` → `76.76.21.21` in Cloudflare (DNS only).
