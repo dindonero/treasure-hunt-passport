@@ -13,12 +13,11 @@ const { ethers } = require("ethers")
 
 const [claimCode, chainId] = process.argv.slice(2)
 const RPC = "https://testnet.novaims.unl.pt/"
-const CONTRACT = "0x745F941759A223a3Ec6DBd4e96291A2633127415" // mumbai1
-const ED1 = "https://mumbai1.treasurehunt.pt", ED2 = "https://mumbai2.treasurehunt.pt"
-const env = Object.fromEntries(readFileSync("/Users/dinis/Desktop/threpos/treasure-hunt-ethglobal/.env.local", "utf8").split("\n").filter(l => l.includes("=")).map(l => [l.slice(0, l.indexOf("=")), l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")]))
+const CONTRACT = process.env.E2E_CONTRACT || "0x745F941759A223a3Ec6DBd4e96291A2633127415" // mumbai1
+const ED1 = process.env.E2E_ED1 || "https://mumbai1.treasurehunt.pt", ED2 = process.env.E2E_ED2 || "https://mumbai2.treasurehunt.pt"
 const hx = k => (k.startsWith("0x") ? k : "0x" + k)
 const provider = new ethers.JsonRpcProvider(RPC)
-const signer = new ethers.Wallet(hx(env.SIGNER_PRIVATE_KEY), provider)
+const signer = new ethers.Wallet(hx(process.env.SIGNER_PRIVATE_KEY || ""), provider)
 const player = ethers.Wallet.createRandom().connect(provider)
 const log = (...a) => console.log(new Date().toISOString().slice(11, 19), ...a)
 
