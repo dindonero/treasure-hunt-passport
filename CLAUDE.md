@@ -40,7 +40,7 @@ project; losing it makes every stored photo unreadable.
 | URL | https://mumbai1.treasurehunt.pt | https://mumbai2.treasurehunt.pt |
 | Vercel project (nova-blockchain-lab) | `treasure-hunt-mumbai1` `prj_vSmIjQfPj0sCXEEDz3H4v68FT9Ww` | `treasure-hunt-mumbai2` `prj_tjqkUPm5yCKkv7a5L1F9MCGu0DaT` |
 | Neon (Vercel integration, fra1) | `treasure-hunt-mumbai1-db` | `treasure-hunt-mumbai2-db` |
-| Contract (Nova Cidade) | `0x745F941759A223a3Ec6DBd4e96291A2633127415` block 134222 | `0x3111bDbF59E49dcF8Ff819fbe4C00cf5D0052842` block 134223 |
+| Contract (Nova Cidade, Blockscout-verified) | `0x745F941759A223a3Ec6DBd4e96291A2633127415` block 134222 | `0x3111bDbF59E49dcF8Ff819fbe4C00cf5D0052842` block 134223 |
 
 - Deploy without Git integration: `VERCEL_ORG_ID=team_CQz61ggf0OqA8z9hRzruzspm VERCEL_PROJECT_ID=<id> vercel deploy --prod --yes`
   from the repo root. `vercel.json` must keep `"framework": "nextjs"` (CLI-created
