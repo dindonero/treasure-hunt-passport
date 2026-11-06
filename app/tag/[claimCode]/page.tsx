@@ -420,6 +420,18 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
         data.message ?? `Found "${data.tag?.name}" and earned ${earned} ${symbol}!`,
       )
       setTxModalOpen(true)
+      // Passport: the first find in an edition earns that edition's badge on Arkiv.
+      fetch("/api/passport/badge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ claimCode, claimTx: receipt?.hash }),
+      })
+        .then((r) => r.json())
+        .then((b) => {
+          if (b?.created) setTxMessage((m) => `${m} New passport badge: ${b.badge.editionName}!`)
+        })
+        .catch(() => {})
       await refetchBalance()
     } catch (err: any) {
       console.error("Error finding tag:", err)

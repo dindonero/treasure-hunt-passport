@@ -44,8 +44,9 @@ next-env.d.ts
 /qr-posters-landscape
 /qr-codes-export
 
-# Local scripts
-/scripts/
+# Local scripts (the passport check is tracked)
+/scripts/*
+!/scripts/test-passport.mjs
 
 # foundry artifacts
 contracts/broadcast/

@@ -37,7 +37,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
+  "exclude": ["landing", "scripts", 
     "node_modules"
   ]
 }
