@@ -178,7 +178,7 @@ export default function Home() {
               </div>
               <div className="text-[11px] truncate" style={{ color: PALETTE.textSecondary }}>
                 <span style={{ color: PALETTE.green, fontWeight: 700 }}>{stats.found}</span> found ·{" "}
-                <span style={{ color: PALETTE.pink, fontWeight: 700 }}>{hidden}</span> hidden · Cadaval
+                <span style={{ color: PALETTE.pink, fontWeight: 700 }}>{hidden}</span> hidden · {process.env.NEXT_PUBLIC_EDITION_NAME || "Treasure Hunt"}
               </div>
             </div>
             <ChevronRight className="w-5 h-5" style={{ color: PALETTE.cyan }} />

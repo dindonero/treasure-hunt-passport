@@ -672,7 +672,7 @@ function RelocatePreview({
       <div
         className="relative"
         style={{
-          aspectRatio: "1278 / 863",
+          aspectRatio: "2400 / 1119",
           background: "linear-gradient(135deg, #131921, #0A0E14)",
         }}
       >
@@ -685,7 +685,7 @@ function RelocatePreview({
           }}
         />
         <img
-          src="/fil_map.jpeg"
+          src="/jwcc-L3.jpeg"
           alt=""
           className="absolute inset-0 w-full h-full object-contain pointer-events-none"
           style={{ filter: `brightness(1.4) saturate(0.5)`, opacity: 0.55 }}

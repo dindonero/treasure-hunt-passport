@@ -140,7 +140,7 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between gap-3 mb-3">
               <div className="min-w-0">
                 <p className="uppercase tracking-wider truncate" style={{ fontSize: 10, color: "#484F58", letterSpacing: 1 }}>
-                  Cadaval
+                  {process.env.NEXT_PUBLIC_EDITION_NAME || "Treasure Hunt"} · Jio World Centre, Level 3
                 </p>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
@@ -245,24 +245,6 @@ export default function DashboardPage() {
                     </div>
                   ) : null}
                 </div>
-
-                {/* Venue legend (Cadaval Festival da Juventude) */}
-                {tags.length > 0 && (
-                  <div
-                    className="mt-3 rounded-[12px] overflow-hidden"
-                    style={{
-                      background: "#FCE9D4",
-                      border: "1px solid rgba(72,79,88,0.4)",
-                    }}
-                  >
-                    <img
-                      src="/fil_map_legend.png"
-                      alt="Festival da Juventude — venue legend"
-                      className="block w-full h-auto select-none"
-                      draggable={false}
-                    />
-                  </div>
-                )}
 
                 {selectedTag && reporting && (
                   <ReportSheet

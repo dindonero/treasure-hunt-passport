@@ -579,7 +579,7 @@ function RelocateMap({ tag, newPos, setNewPos }: RelocateMapProps) {
       onClick={onTap}
       className="relative overflow-hidden rounded-xl cursor-crosshair"
       style={{
-        aspectRatio: "1278 / 863",
+        aspectRatio: "2400 / 1119",
         background: `linear-gradient(135deg, ${PALETTE.bgCard}, ${PALETTE.bgSecondary})`,
         border: `1px solid ${COLORS.cyan}25`,
       }}
@@ -593,7 +593,7 @@ function RelocateMap({ tag, newPos, setNewPos }: RelocateMapProps) {
         }}
       />
       <img
-        src="/fil_map.jpeg"
+        src="/jwcc-L3.jpeg"
         alt=""
         className="absolute inset-0 w-full h-full object-contain pointer-events-none"
         style={{ filter: `brightness(1.4) saturate(0.5) drop-shadow(0 0 6px ${COLORS.cyan}40)`, opacity: 0.55 }}

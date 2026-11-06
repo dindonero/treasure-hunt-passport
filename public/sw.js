@@ -3,13 +3,12 @@
 // pages or API responses, so dynamic data is always fresh. Goal: when venue
 // WiFi drops mid-session, the app shell still loads from disk.
 
-const STATIC_CACHE = "th-static-v3";
+const STATIC_CACHE = "th-static-v4";
 const STATIC_ASSETS = [
   "/treasure-hunt-only-logo.png",
   "/treasure-hunt-logo.png",
   "/favicon.png",
-  "/fil_map.jpeg",
-  "/fil_map_legend.png",
+  "/jwcc-L3.jpeg",
   "/manifest.webmanifest",
 ];
 

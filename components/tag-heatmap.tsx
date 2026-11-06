@@ -221,7 +221,7 @@ export default function TagHeatmap() {
       <div
         className="relative mx-1 overflow-hidden rounded-2xl"
         style={{
-          aspectRatio: "1278 / 863",
+          aspectRatio: "2400 / 1119",
           background: `linear-gradient(135deg, ${PALETTE.bgCard}, ${PALETTE.bgSecondary})`,
           border: `1px solid ${PALETTE.cyan}25`,
         }}
@@ -240,7 +240,7 @@ export default function TagHeatmap() {
         {/* Floor plan */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
-            src="/fil_map.jpeg"
+            src="/jwcc-L3.jpeg"
             alt=""
             fill
             sizes="(max-width: 768px) 100vw, 700px"

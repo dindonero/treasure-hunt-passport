@@ -262,7 +262,7 @@ export default function VenueMap({
           style={{
             transform: `scale(${zoom}) translate(${pan.x / zoom}px, ${pan.y / zoom}px)`,
             ...(isExpanded ? {
-              aspectRatio: "1278 / 863",
+              aspectRatio: "2400 / 1119",
               width: "auto",
               height: "auto",
               maxWidth: "100%",
@@ -272,7 +272,7 @@ export default function VenueMap({
         >
           {/* Map Image */}
           <img
-            src="/fil_map.jpeg"
+            src="/jwcc-L3.jpeg"
             alt="Venue Map"
             className={`block select-none pointer-events-none ${
               isExpanded ? "w-full h-full" : "w-full h-auto"

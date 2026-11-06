@@ -51,6 +51,13 @@ project; losing it makes every stored photo unreadable.
   the tag page and `/api/nfc-tags/update` still exist for the admin-skip path
   (and would apply to an `owner_address` set by hand in the admin panel).
 
+- **Map:** the Devcon edition's Jio World Centre Level 3 plan (`public/jwcc-L3.jpeg`,
+  2400x1119) replaces the Cadaval/FIL plan in the venue map, heatmap, report
+  sheet and admin reports tab; `public/sw.js` cache bumped to v4. Single floor:
+  Devcon's Level 0 needs the `floor` column and floor toggle from that repo
+  (about 15 files), not ported. `fil_map.jpeg` stays only for `/report`, the
+  Cadaval post-event snapshot.
+
 ## Deployment (two demo editions)
 
 | | mumbai1 | mumbai2 |
