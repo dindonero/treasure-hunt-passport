@@ -215,25 +215,19 @@ $$ LANGUAGE plpgsql;
 
 
 -- =============================================
--- 10. STORAGE BUCKET (for image uploads)
+-- 10. STORAGE OBJECTS (image uploads)
 -- =============================================
-INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
-VALUES (
-  'images',
-  'images',
-  true,
-  1048576, -- 1MB
-  ARRAY['image/jpeg', 'image/png', 'image/webp', 'image/gif']
-)
-ON CONFLICT (id) DO NOTHING;
-
-CREATE POLICY "Public read access for images"
-  ON storage.objects FOR SELECT
-  USING (bucket_id = 'images');
-
-CREATE POLICY "Allow image uploads"
-  ON storage.objects FOR INSERT
-  WITH CHECK (bucket_id = 'images');
+-- Neon has no blob store, so uploaded images (admin tag/merch photos and
+-- player report photos, capped at 1 MB by the upload route) live here as
+-- bytea. `key` is "<bucket>/<path>", e.g. "images/uploads/<file>.jpg".
+-- Served publicly by app/api/images/[...key]/route.ts; written/deleted via
+-- the storage shim in lib/db.ts.
+CREATE TABLE IF NOT EXISTS storage_objects (
+  key TEXT PRIMARY KEY,
+  content_type TEXT NOT NULL DEFAULT 'application/octet-stream',
+  bytes BYTEA NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
 
 
 -- =============================================
@@ -318,3 +312,5 @@ ALTER TABLE leaderboard_cache     DISABLE ROW LEVEL SECURITY;
 ALTER TABLE contract_deployments  DISABLE ROW LEVEL SECURITY;
 ALTER TABLE chain_events          DISABLE ROW LEVEL SECURITY;
 ALTER TABLE tag_reports           DISABLE ROW LEVEL SECURITY;
+
+ALTER TABLE storage_objects DISABLE ROW LEVEL SECURITY;

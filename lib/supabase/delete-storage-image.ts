@@ -1,22 +1,23 @@
-import type { SupabaseClient } from "@supabase/supabase-js"
+import type { DbClient } from "@/lib/db"
 
 const BUCKET = "images"
 
 /**
- * Extracts the storage path from a Supabase public URL and deletes the file.
- * Silently ignores non-Supabase URLs (e.g. pasted external links) and any errors.
+ * Extracts the storage path from an app image URL and deletes the object.
+ * Image URLs are served by `/api/images/<bucket>/<path>` (Neon-backed storage).
+ * Silently ignores externally-pasted URLs and any errors.
  */
-export async function deleteStorageImage(supabase: SupabaseClient, imageUrl: string | null | undefined) {
+export async function deleteStorageImage(db: DbClient, imageUrl: string | null | undefined) {
   if (!imageUrl) return
 
-  const marker = `/storage/v1/object/public/${BUCKET}/`
+  const marker = `/api/images/${BUCKET}/`
   const idx = imageUrl.indexOf(marker)
-  if (idx === -1) return // not a Supabase storage URL
+  if (idx === -1) return // not one of our stored images
 
   const filePath = imageUrl.slice(idx + marker.length)
   if (!filePath) return
 
-  const { error } = await supabase.storage.from(BUCKET).remove([filePath])
+  const { error } = await db.storage.from(BUCKET).remove([filePath])
   if (error) {
     console.error("Failed to delete storage image:", filePath, error)
   }

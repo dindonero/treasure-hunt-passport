@@ -228,16 +228,18 @@ export async function GET(request: NextRequest) {
   {
     const start = Date.now()
     const supabase = createAdminClient()
-    let supabaseHost: string | null = null
-    let supabaseProjectRef: string | null = null
+    let supabaseHost: string | null = process.env.PGHOST || null
+    let supabaseProjectRef: string | null = process.env.NEON_PROJECT_ID || null
     try {
-      const u = new URL(process.env.SUPABASE_URL || "")
-      supabaseHost = u.host
-      // Project refs are the leftmost label of *.supabase.co; ignore custom domains
-      if (u.host.endsWith(".supabase.co")) {
-        supabaseProjectRef = u.host.split(".")[0]
+      // Neon (Postgres) connection — derive the DB host for display.
+      const u = new URL(process.env.DATABASE_URL || process.env.POSTGRES_URL || "")
+      if (u.host) supabaseHost = u.host
+      // Neon hosts look like ep-xxxx-pooler.<region>.aws.neon.tech — the
+      // leftmost label is the endpoint id.
+      if (u.host.endsWith(".neon.tech")) {
+        supabaseProjectRef = process.env.NEON_PROJECT_ID || u.host.split(".")[0]
       }
-    } catch { /* SUPABASE_URL not set */ }
+    } catch { /* DATABASE_URL not set */ }
     const sinceIso = new Date(Date.now() - RECENT_TX_WINDOW_MS).toISOString()
     try {
       // A wallet only lands in treasure_hunt_users once it picks a username,
@@ -575,8 +577,7 @@ export async function GET(request: NextRequest) {
     "SIGNER_PRIVATE_KEY",
     "JWT_SECRET",
     "THIRDWEB_SECRET_KEY",
-    "SUPABASE_URL",
-    "SUPABASE_ANON_KEY",
+    "DATABASE_URL",
   ]
   const OPTIONAL_VARS = ["CRON_SECRET", "NEXT_PUBLIC_SITE_URL", "VERCEL_TOKEN", "VERCEL_PROJECT_ID", "VERCEL_TEAM_ID"]
   const env = {

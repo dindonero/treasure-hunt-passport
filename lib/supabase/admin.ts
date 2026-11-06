@@ -1,13 +1,9 @@
-import { createClient } from "@supabase/supabase-js"
+import { createNeonClient, type NeonClient } from "@/lib/db"
 
 /**
- * Cookieless Supabase client for use in cron jobs and other non-request contexts.
- * Uses the anon key directly (no RLS on sync tables).
+ * Cookieless data client for cron jobs and other non-request contexts.
+ * Backed by Neon (Postgres) via the supabase-compatible client.
  */
-export function createAdminClient() {
-  return createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_ANON_KEY!,
-    { global: { fetch: (url, init) => fetch(url, { ...init, cache: "no-store" }) } },
-  )
+export function createAdminClient(): NeonClient {
+  return createNeonClient()
 }

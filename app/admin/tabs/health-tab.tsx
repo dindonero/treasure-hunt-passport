@@ -762,7 +762,7 @@ export default function HealthTab() {
 
           {/* Database */}
           <SectionCard
-            title="Database (Supabase)"
+            title="Database (Neon)"
             icon={Database}
             status={status.dbOk ? "ok" : "bad"}
             badge={
@@ -775,7 +775,7 @@ export default function HealthTab() {
                       </Badge>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs">
-                      Supabase project ref from <span className="font-mono">SUPABASE_URL</span>: <span className="font-mono">{data.db.host}</span>. If your row exists in a different project (localhost dev, prior edition), counts here won&apos;t reflect it.
+                      Neon endpoint from <span className="font-mono">DATABASE_URL</span>: <span className="font-mono">{data.db.host}</span>. If your row exists in a different database (localhost dev, prior edition), counts here won&apos;t reflect it.
                     </TooltipContent>
                   </Tooltip>
                 ) : null}
@@ -788,8 +788,8 @@ export default function HealthTab() {
                 <Field
                   label="Project"
                   tone="muted"
-                  hint="Which Supabase project this deployment is talking to. A wallet only lands in this project's treasure_hunt_users once it picks a username, so if you set a username elsewhere (localhost, previous edition), it won't be counted here."
-                  value={data.db.host ? <span className="text-zinc-300">{data.db.host}</span> : <span className="text-zinc-500">SUPABASE_URL not set</span>}
+                  hint="Which Neon database this deployment is talking to. A wallet only lands in this database's treasure_hunt_users once it picks a username, so if you set a username elsewhere (localhost, previous edition), it won't be counted here."
+                  value={data.db.host ? <span className="text-zinc-300">{data.db.host}</span> : <span className="text-zinc-500">DATABASE_URL not set</span>}
                 />
                 <Field
                   label="Players (named)"

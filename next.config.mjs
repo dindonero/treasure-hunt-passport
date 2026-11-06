@@ -1,24 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-const supabaseHostname = process.env.SUPABASE_URL
-  ? new URL(process.env.SUPABASE_URL).hostname
-  : undefined;
-
+// Images are served same-origin from /api/images/[...key] (Neon-backed
+// storage_objects), so no remote image hosts are needed.
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     unoptimized: false,
-    remotePatterns: supabaseHostname
-      ? [
-          {
-            protocol: "https",
-            hostname: supabaseHostname,
-            pathname: "/storage/v1/object/public/**",
-          },
-        ]
-      : [],
   },
 }
 
