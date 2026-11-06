@@ -3,12 +3,12 @@
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { Home, Scan, Map, Trophy, ShoppingBag } from "lucide-react"
+import { Scan, Map, Trophy, ShoppingBag, BookUser } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useWallet } from "@/lib/wallet-context"
 
 const navItems = [
-  { href: "/", icon: Home, label: "Home", alwaysEnabled: true },
+  { href: "/passport", icon: BookUser, label: "Passport" },
   { href: "/dashboard", icon: Map, label: "Map" },
   { href: "/scan", icon: Scan, label: "Scan", isFab: true, alwaysEnabled: true },
   { href: "/leaderboard", icon: Trophy, label: "Board" },
