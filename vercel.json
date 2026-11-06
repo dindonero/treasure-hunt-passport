@@ -1,4 +1,10 @@
 {
   "framework": "nextjs",
-  "regions": ["fra1"]
+  "regions": ["fra1"],
+  "crons": [
+    {
+      "path": "/api/cron/sync-leaderboard",
+      "schedule": "*/5 * * * *"
+    }
+  ]
 }
