@@ -1,6 +1,6 @@
 # Treasure Hunt Passport
 
-Treasure Hunt turns physical events into on-chain scavenger hunts. Players tap NFC tags hidden around a venue, claim ERC-20 rewards gaslessly through ERC-4337 smart accounts, climb a live leaderboard and redeem tokens for merch. It has run at real events since 2025 (Cadaval, Smart Cities Summit, Data Summit, FIL, Lisbon Games Week, NEI, Devcon 8 and others), one deployment per event at `<event>.treasurehunt.pt`.
+Treasure Hunt turns physical events into on-chain scavenger hunts. Players tap NFC tags hidden around a venue, claim ERC-20 rewards gaslessly through ERC-4337 smart accounts, climb a live leaderboard and redeem tokens for merch. It has run at real events since 2025 (Cadaval, Smart Cities Summit, Data Summit, FIL, Lisbon Games Week, NEI and others), one deployment per event at `<event>.treasurehunt.pt`.
 
 Each edition is its own deployment with its own database. Until now, nothing a player did at one event reached the next one. This repository adds a **player passport** that every edition can read: a badge for each edition the player has played, and a profile photo that follows them. The passport lives on **Arkiv**. The photo is encrypted and stored on **Swarm**.
 
@@ -62,10 +62,11 @@ pnpm dev                     # localhost:3000
 
 The database schema is one idempotent file, `supabase-schema.sql` (the name is historical; it runs on Neon). Contracts: `cd contracts && forge build && forge test`.
 
-Check for the passport (offline crypto checks, then a round trip on Arkiv's testnet with a throwaway player that it deletes afterwards):
+Checks:
 
 ```bash
-node --env-file=.env.local scripts/test-passport.mjs
+node --env-file=.env.local scripts/test-passport.mjs   # photo crypto offline, then an Arkiv round trip with a throwaway player
+SIGNER_PRIVATE_KEY=0x... node scripts/e2e.mjs <claimCode> <chainId>   # the whole flow against two deployed editions, see the file header
 ```
 
 ## Use of AI

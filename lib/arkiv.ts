@@ -63,6 +63,16 @@ export type BadgeRecord = {
   foundAt: number
 }
 
+/** Arkiv `str` values hold at most 128 bytes of UTF-8; our DB columns are longer. */
+export function str128(v: string): string {
+  let out = ""
+  for (const ch of v) {
+    if (Buffer.byteLength(out + ch) > 128) break
+    out += ch
+  }
+  return out
+}
+
 export const currentEdition = () => ({
   slug: process.env.NEXT_PUBLIC_EDITION_SLUG || "dev",
   name: process.env.NEXT_PUBLIC_EDITION_NAME || "Development",
@@ -157,9 +167,9 @@ export async function issueBadge(input: BadgeInput): Promise<{ created: boolean;
   const expiration = ExpirationTime.max()
   const record = {
     edition: edition.slug,
-    editionName: edition.name,
+    editionName: str128(edition.name),
     tagId: input.tagId,
-    tagName: input.tagName,
+    tagName: str128(input.tagName),
     claimTx: input.claimTx ?? "",
     foundAt: Math.floor(Date.now() / 1000),
   }
@@ -172,7 +182,7 @@ export async function issueBadge(input: BadgeInput): Promise<{ created: boolean;
         creates: [
           {
             schema: Passport,
-            values: { player, firstEdition: edition.slug, ...(input.handle ? { handle: input.handle } : {}) },
+            values: { player, firstEdition: edition.slug, ...(input.handle ? { handle: str128(input.handle) } : {}) },
             expiration,
           },
           badgeCreate,
@@ -194,7 +204,7 @@ export async function setPhoto(player: string, photo: string, photoNonce: string
         firstEdition: currentEdition().slug,
         photo,
         photoNonce,
-        ...(handle ? { handle } : {}),
+        ...(handle ? { handle: str128(handle) } : {}),
       },
       { expiration },
     )

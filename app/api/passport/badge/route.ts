@@ -1,4 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
+
+// Each request waits on at least one Arkiv block (2 s), the photo ones on Swarm too.
+export const maxDuration = 60
 import { getAuthPayload } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
 import { hasClaimedReward } from "@/lib/onchain"

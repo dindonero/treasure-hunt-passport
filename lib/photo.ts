@@ -33,6 +33,7 @@ export function imageType(bytes: Buffer): string | null {
   if (bytes[0] === 0xff && bytes[1] === 0xd8) return "image/jpeg"
   if (bytes.subarray(0, 4).toString("hex") === "89504e47") return "image/png"
   if (bytes.subarray(0, 4).toString() === "RIFF" && bytes.subarray(8, 12).toString() === "WEBP") return "image/webp"
+  if (bytes.subarray(0, 4).toString() === "GIF8") return "image/gif"
   return null
 }
 

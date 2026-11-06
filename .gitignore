@@ -47,6 +47,7 @@ next-env.d.ts
 # Local scripts (the passport check is tracked)
 /scripts/*
 !/scripts/test-passport.mjs
+!/scripts/e2e.mjs
 
 # foundry artifacts
 contracts/broadcast/

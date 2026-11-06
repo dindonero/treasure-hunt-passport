@@ -1,4 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
+
+// Each request waits on at least one Arkiv block (2 s), the photo ones on Swarm too.
+export const maxDuration = 60
 import { getAuthPayload } from "@/lib/auth"
 import { clearPhoto, getPassport, setPhoto } from "@/lib/arkiv"
 import { decryptPhoto, encryptPhoto, imageType, photoKey, swarmDownload, swarmUpload } from "@/lib/photo"
@@ -40,7 +43,7 @@ export async function POST(request: NextRequest) {
   if (!(file instanceof File)) return NextResponse.json({ error: "No file" }, { status: 400 })
   if (file.size > MAX_BYTES) return NextResponse.json({ error: "Photo is too large" }, { status: 413 })
   const plain = Buffer.from(await file.arrayBuffer())
-  if (!imageType(plain)) return NextResponse.json({ error: "Please pick a JPEG, PNG or WebP image" }, { status: 415 })
+  if (!imageType(plain)) return NextResponse.json({ error: "Please pick a JPEG, PNG, WebP or GIF image" }, { status: 415 })
   try {
     const { key, nonce } = await photoKey({ mode: "mint", player: me })
     const reference = await swarmUpload(encryptPhoto(key, plain))
