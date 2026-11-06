@@ -28,19 +28,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     const supabase = await createClient()
 
-    const { data: ownedTag } = await supabase
-      .from("nfc_tags")
-      .select("status")
-      .eq("owner_address", finderAddress)
-      .maybeSingle()
-
-    if (ownedTag && ownedTag.status !== "hidden") {
-      return NextResponse.json(
-        { error: "You must mark your own tag as ready before finding other tags" },
-        { status: 403 }
-      )
-    }
-
     const { data: tag, error: findError } = await supabase
       .from("nfc_tags")
       .select("*")
@@ -53,10 +40,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     if (tag.status !== "hidden") {
       return NextResponse.json({ error: "This tag is not in play" }, { status: 400 })
-    }
-
-    if (tag.owner_address === finderAddress) {
-      return NextResponse.json({ error: "You cannot find your own tag" }, { status: 400 })
     }
 
     const { address: contractAddress } = await getActiveContract()

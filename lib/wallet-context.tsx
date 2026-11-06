@@ -30,10 +30,6 @@ interface WalletContextType {
   isMembershipLoading: boolean
   needsUsername: boolean
   applyHandle: (handle: string) => void
-  tagStatus: "loading" | "no-tag" | "registered" | "hidden"
-  tagClaimCode: string | null
-  needsTagSetup: boolean
-  refreshTagStatus: () => Promise<void>
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined)
@@ -55,8 +51,6 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
   const [hasHandle, setHasHandle] = useState(false)
   const [isMembershipLoading, setIsMembershipLoading] = useState(false)
 
-  const [tagStatus, setTagStatus] = useState<"loading" | "no-tag" | "registered" | "hidden">("loading")
-  const [tagClaimCode, setTagClaimCode] = useState<string | null>(null)
 
   const [authCheckComplete, setAuthCheckComplete] = useState(false)
   const hasCheckedAuth = useRef(false)
@@ -130,8 +124,6 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
     setDisplayName(null)
     setHasHandle(false)
     setIsMembershipLoading(false)
-    setTagStatus("loading")
-    setTagClaimCode(null)
     thirdwebAutoAuthAttempted.current = false
     if (typeof window !== "undefined") {
       localStorage.removeItem("user_handle")
@@ -192,24 +184,6 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
     return data
   }, [isAuthenticated, authAddress, isAdmin, thirdwebAddress, signMessage, applyHandle])
 
-  // Fetch tag status for the authenticated user
-  const refreshTagStatus = useCallback(async () => {
-    try {
-      const res = await fetch("/api/user-tag-status", { credentials: "include" })
-      const data = await res.json()
-      if (data.hasTag) {
-        setTagStatus(data.tagStatus as "registered" | "hidden")
-        setTagClaimCode(data.tagClaimCode)
-      } else {
-        setTagStatus("no-tag")
-        setTagClaimCode(null)
-      }
-    } catch {
-      setTagStatus("no-tag")
-      setTagClaimCode(null)
-    }
-  }, [])
-
   // --- Effects ---
 
   // Check auth status on mount
@@ -252,16 +226,6 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
       })
   }, [authCheckComplete, thirdwebAccount, isAuthenticated, authenticate])
 
-  // Fetch tag status after authentication
-  useEffect(() => {
-    if (isAuthenticated) {
-      refreshTagStatus()
-    } else {
-      setTagStatus("loading")
-      setTagClaimCode(null)
-    }
-  }, [isAuthenticated, refreshTagStatus])
-
   // Sync thirdweb signer to wallet-provider-utils
   useEffect(() => {
     if (thirdwebAccount) {
@@ -295,7 +259,6 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
   }, [thirdwebAddress, isAuthenticated, authAddress, checkAuthStatus])
 
   const needsUsername = isAuthenticated && !hasHandle && !isMembershipLoading && !isAuthenticating
-  const needsTagSetup = isAuthenticated && tagStatus === "registered"
 
   const providerValue = useMemo(() => ({
     address,
@@ -311,11 +274,7 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
     isMembershipLoading,
     needsUsername,
     applyHandle,
-    tagStatus,
-    tagClaimCode,
-    needsTagSetup,
-    refreshTagStatus,
-  }), [address, isWalletReady, isConnected, signMessage, isAuthenticated, isAuthenticating, isAdmin, disconnect, authenticate, displayName, isMembershipLoading, needsUsername, applyHandle, tagStatus, tagClaimCode, needsTagSetup, refreshTagStatus])
+  }), [address, isWalletReady, isConnected, signMessage, isAuthenticated, isAuthenticating, isAdmin, disconnect, authenticate, displayName, isMembershipLoading, needsUsername, applyHandle])
 
   return (
     <WalletContext.Provider value={providerValue}>

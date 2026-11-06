@@ -50,7 +50,6 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
   const [error, setError] = useState("")
 
   // Ownership claiming
-  const [claimingOwnership, setClaimingOwnership] = useState(false)
 
   // Edit form state
   const [editing, setEditing] = useState(false)
@@ -69,7 +68,6 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
   // Find/claim state
   const [claiming, setClaiming] = useState(false)
   const [alreadyFound, setAlreadyFound] = useState(false)
-  const [alreadyOwnsTag, setAlreadyOwnsTag] = useState(false)
   // True once an address-aware fetch has completed, so we know whether the user already found this tag.
   const [findStatusChecked, setFindStatusChecked] = useState(false)
 
@@ -80,7 +78,6 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
   // Concurrency guards
   const statusToggleLock = useRef(false)
   const findLock = useRef(false)
-  const ownershipLock = useRef(false)
   // One-shot guard so the auto-find effect doesn't re-fire on every render
   // (or retry after a failure / user cancel).
   const autoFindRef = useRef(false)
@@ -125,18 +122,6 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
     return () => { cancelled = true }
   }, [tag, address, contractAddress])
 
-  // owns-any-tag — only matters for blank-tag claim flow. Fired only when the
-  // tag is blank to avoid a per-user request on the common (hidden) path.
-  useEffect(() => {
-    if (!tag || tag.status !== "blank") return
-    if (!isAuthenticated) return
-    let cancelled = false
-    fetch("/api/auth/owns-any-tag", { credentials: "include" })
-      .then((r) => r.json())
-      .then((data) => { if (!cancelled && data?.owns) setAlreadyOwnsTag(true) })
-      .catch(() => { /* non-fatal */ })
-    return () => { cancelled = true }
-  }, [tag, isAuthenticated])
 
   // Auto-fire the find/claim transaction once the wallet has finished loading
   // and we've verified this player hasn't already claimed. Tapping the NFC
@@ -195,95 +180,6 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
     setHintExpanded(!!t.hint)
     setLocationX(t.location_x)
     setLocationY(t.location_y)
-  }
-
-  const handleClaimOwnership = async () => {
-    if (ownershipLock.current) return
-    ownershipLock.current = true
-
-    if (!isAuthenticated) {
-      const result = await authenticate()
-      if (result.error) {
-        ownershipLock.current = false
-        setTxStatus("error")
-        setTxMessage(result.error)
-        setTxModalOpen(true)
-        return
-      }
-    }
-
-    if (!isCorrectChain) {
-      const switched = await ensureCorrectChain()
-      await new Promise((resolve) => setTimeout(resolve, 150))
-      if (!switched) {
-        ownershipLock.current = false
-        setTxStatus("error")
-        setTxMessage("Please switch to the correct network")
-        setTxModalOpen(true)
-        return
-      }
-    }
-
-    setClaimingOwnership(true)
-    try {
-      // Step 1: Claim ownership in DB and get reward signature
-      const res = await fetch("/api/nfc-tags/claim-ownership", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ claimCode }),
-      })
-      const data = await res.json()
-
-      if (!data.success) {
-        if (res.status === 409 && data.error?.includes("already own")) {
-          setAlreadyOwnsTag(true)
-        }
-        setTxStatus("error")
-        setTxMessage(data.error || "Failed to claim ownership")
-        setTxModalOpen(true)
-        return
-      }
-
-      // Step 2: If signature returned, submit on-chain for ownership reward
-      if (data.signature) {
-        try {
-          const signer = await getSigner()
-          const contract = new ethers.Contract(contractAddress, claimObjectRewardAbi, signer)
-          const tx = await contract.claimObjectReward(data.objectId, data.amount, data.signature)
-          const receipt = await tx.wait()
-
-          setTxStatus("success")
-          setTxHash(receipt?.hash)
-          setTxMessage(`Tag claimed! You earned 500 ${symbol} as the owner!`)
-          setTxModalOpen(true)
-          await refetchBalance()
-        } catch (txErr: any) {
-          // On-chain tx failed — revert DB ownership so tag goes back to blank
-          console.error("On-chain ownership reward failed, reverting:", txErr)
-          await fetch("/api/nfc-tags/unclaim-ownership", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            credentials: "include",
-            body: JSON.stringify({ claimCode }),
-          }).catch(() => {})
-          throw txErr
-        }
-      }
-
-      // Only advance UI after on-chain tx succeeds (or if no signature needed)
-      setTag(data.tag)
-      populateForm(data.tag)
-      setEditing(true)
-    } catch (err: any) {
-      console.error("Error claiming ownership:", err)
-      setTxStatus("error")
-      setTxMessage(getClaimErrorMessage(err))
-      setTxModalOpen(true)
-    } finally {
-      setClaimingOwnership(false)
-      ownershipLock.current = false
-    }
   }
 
   const handleSave = async () => {
@@ -578,93 +474,38 @@ export default function TagPage({ params }: { params: Promise<{ claimCode: strin
             </Link>
           </Card>
 
-        /* ===== BLANK TAG: First user claims ownership ===== */
+        /* ===== BLANK TAG: not set up yet. Admins set it up; players come back later ===== */
         ) : tag?.status === "blank" && !adminSkipped ? (
           <Card className="glass-card p-6 text-center">
-            <div className="w-20 h-20 rounded-full bg-[var(--neon-cyan)]/20 flex items-center justify-center mx-auto mb-4 animate-pulse">
+            <div className="w-20 h-20 rounded-full bg-[var(--neon-cyan)]/20 flex items-center justify-center mx-auto mb-4">
               <Package className="w-10 h-10 text-[var(--neon-cyan)]" />
             </div>
             <h1 className="text-2xl font-bold gradient-text mb-2" style={{ fontFamily: "var(--font-display)" }}>
-              UNCLAIMED TAG
+              NOT SET UP YET
             </h1>
-            <p className="text-[var(--text-secondary)] mb-6">
-              This NFC tag has no owner yet. Claim it to earn 500 {symbol} and set it up as a treasure!
-            </p>
+            <p className="text-[var(--text-secondary)] mb-6">This tag is not part of the hunt yet. Check back soon!</p>
             {!isConnected ? (
-              <div>
-                <p className="text-[var(--text-muted)] mb-4">Connect your wallet to claim this tag.</p>
-                <WalletConnectButton label="Join the Game!" />
-              </div>
-            ) : alreadyOwnsTag ? (
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-[var(--neon-yellow)]/20 flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle2 className="w-6 h-6 text-[var(--neon-yellow)]" />
-                </div>
-                <p className="text-[var(--text-muted)]">You already own a tag. Each player can only claim one tag.</p>
-                <Link href="/dashboard">
-                  <Button className="mt-4 btn-neon-cyan">View Dashboard</Button>
-                </Link>
-                {isAdmin && (
-                  <Button
-                    onClick={handleAdminSkip}
-                    disabled={adminSkipping}
-                    variant="outline"
-                    className="w-full mt-3 border-[var(--neon-cyan)]/30 text-[var(--neon-cyan)]"
-                  >
-                    {adminSkipping ? (
-                      <span className="flex items-center gap-2">
-                        <div className="w-4 h-4 border-2 border-[var(--neon-cyan)]/30 border-t-[var(--neon-cyan)] rounded-full animate-spin" />
-                        Skipping...
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <SkipForward className="w-4 h-4" />
-                        Admin: Skip Claim
-                      </span>
-                    )}
-                  </Button>
+              <WalletConnectButton label="Join the Game!" />
+            ) : isAdmin ? (
+              <Button
+                onClick={handleAdminSkip}
+                disabled={adminSkipping}
+                variant="outline"
+                className="w-full border-[var(--neon-cyan)]/30 text-[var(--neon-cyan)]"
+              >
+                {adminSkipping ? (
+                  "Setting up..."
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <SkipForward className="w-4 h-4" />
+                    Admin: Set up this tag
+                  </span>
                 )}
-              </div>
+              </Button>
             ) : (
-              <div className="space-y-3">
-                <Button
-                  onClick={handleClaimOwnership}
-                  disabled={claimingOwnership || adminSkipping}
-                  className="w-full btn-neon-pink text-lg py-6"
-                >
-                  {claimingOwnership ? (
-                    <span className="flex items-center gap-2">
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Claiming...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      <Sparkles className="w-5 h-5" />
-                      Claim This Tag (+500 {symbol})
-                    </span>
-                  )}
-                </Button>
-                {isAdmin && (
-                  <Button
-                    onClick={handleAdminSkip}
-                    disabled={adminSkipping || claimingOwnership}
-                    variant="outline"
-                    className="w-full border-[var(--neon-cyan)]/30 text-[var(--neon-cyan)]"
-                  >
-                    {adminSkipping ? (
-                      <span className="flex items-center gap-2">
-                        <div className="w-4 h-4 border-2 border-[var(--neon-cyan)]/30 border-t-[var(--neon-cyan)] rounded-full animate-spin" />
-                        Skipping...
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <SkipForward className="w-4 h-4" />
-                        Admin: Skip Claim
-                      </span>
-                    )}
-                  </Button>
-                )}
-              </div>
+              <Link href="/dashboard">
+                <Button className="btn-neon-cyan">View the map</Button>
+              </Link>
             )}
           </Card>
 

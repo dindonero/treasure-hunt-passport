@@ -192,44 +192,6 @@ export default function Home() {
           <Tile color={PALETTE.pink}   icon={Users}      label="Social"      sub="X · LinkedIn"      href="/social-rewards" />
         </div>
 
-        {/* Nova Cidade booth pointer — high-visibility callout: this is the
-            primary CTA for organic tag growth at the venue, so it needs to
-            read at a glance, not be a footnote. */}
-        <div
-          className="mt-1 rounded-[14px] flex items-center gap-3 px-4 py-3.5 relative overflow-hidden"
-          style={{
-            background: `linear-gradient(135deg, ${PALETTE.pink}33 0%, ${PALETTE.orange}26 100%)`,
-            border: `1.5px solid ${PALETTE.pink}AA`,
-            boxShadow: `0 0 18px ${PALETTE.pink}55, inset 0 0 18px ${PALETTE.pink}1A`,
-          }}
-        >
-          <div
-            className="flex items-center justify-center flex-shrink-0 animate-pulse"
-            style={{
-              width: 40, height: 40, borderRadius: 12,
-              background: `linear-gradient(135deg, ${PALETTE.pink}66 0%, ${PALETTE.orange}55 100%)`,
-              border: `1px solid ${PALETTE.pink}AA`,
-              boxShadow: `0 0 12px ${PALETTE.pink}88`,
-            }}
-          >
-            <Sparkles className="w-5 h-5" style={{ color: "#fff" }} />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div
-              className="font-bebas tracking-wider text-[16px] leading-tight"
-              style={{
-                color: "#fff",
-                textShadow: `0 0 10px ${PALETTE.pink}AA, 0 0 18px ${PALETTE.pink}66`,
-              }}
-            >
-              HIDE YOUR OWN TAG · EARN 500 {symbol}
-            </div>
-            <div className="text-[11.5px] mt-0.5" style={{ color: PALETTE.textSecondary, lineHeight: 1.35 }}>
-              Stop by the <span style={{ color: PALETTE.orange, fontWeight: 700 }}>Nova Cidade · Nova IMS</span> booth
-            </div>
-          </div>
-        </div>
-
         {isAdmin && (
           <div className="flex flex-col gap-2">
             <Link href="/merch-history" className="block">

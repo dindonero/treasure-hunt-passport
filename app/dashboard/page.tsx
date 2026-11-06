@@ -7,7 +7,6 @@ import { useWallet } from "@/lib/wallet-context"
 import AppHeader from "@/components/app-header"
 import VenueMap from "@/components/venue-map"
 import { ArrowLeft, MapPin, HelpCircle, Coins, CheckCircle2, X, Map as MapIcon, List, Eye, EyeOff, ChevronDown, AlertTriangle, Pencil } from "lucide-react"
-import EditOwnTagSheet from "@/components/edit-own-tag-sheet"
 import Link from "next/link"
 import { DashboardSkeleton } from "@/components/skeletons"
 import { useTokenMetadata } from "@/lib/token-metadata-context"
@@ -37,7 +36,6 @@ export default function DashboardPage() {
   const [selectedTag, setSelectedTag] = useState<DashboardTag | null>(null)
   const [view, setView] = useState<"map" | "list">("map")
   const [reporting, setReporting] = useState(false)
-  const [editingOwnTag, setEditingOwnTag] = useState(false)
   const [userRank, setUserRank] = useState<number | null>(null)
 
   useEffect(() => {
@@ -233,7 +231,6 @@ export default function DashboardPage() {
                       tag={selectedTag}
                       onClose={() => setSelectedTag(null)}
                       onReport={() => setReporting(true)}
-                      onEdit={() => setEditingOwnTag(true)}
                     />
                   ) : tags.length > 0 ? (
                     <div className="text-center px-3 py-2.5 rounded-[10px]"
@@ -279,25 +276,6 @@ export default function DashboardPage() {
                   />
                 )}
 
-                {selectedTag && selectedTag.is_own && (
-                  <EditOwnTagSheet
-                    tag={{
-                      id: selectedTag.id,
-                      name: selectedTag.name,
-                      hint: selectedTag.hint,
-                      status: selectedTag.status,
-                      token_reward: selectedTag.token_reward,
-                      find_count: selectedTag.find_count,
-                    }}
-                    open={editingOwnTag}
-                    onClose={() => setEditingOwnTag(false)}
-                    onSaved={() => {
-                      setEditingOwnTag(false)
-                      // Refetch dashboard tags to pick up the saved values.
-                      fetchDashboard()
-                    }}
-                  />
-                )}
 
                 {/* Bottom stats tiles — Found / Hidden / Rank */}
                 {tags.length > 0 && (
@@ -416,12 +394,10 @@ function CompactTagCard({
   tag,
   onClose,
   onReport,
-  onEdit,
 }: {
   tag: DashboardTag
   onClose: () => void
   onReport: () => void
-  onEdit: () => void
 }) {
   const { symbol } = useTokenMetadata()
   const [hintRevealed, setHintRevealed] = useState(false)
@@ -463,28 +439,7 @@ function CompactTagCard({
             <span><b style={{ color: "#58A6FF" }}>{tag.find_count}</b> finders</span>
           </div>
         </div>
-        {tag.is_own ? (
-          <button
-            onClick={onEdit}
-            type="button"
-            title="Edit your tag"
-            className="cursor-pointer flex items-center gap-1 leading-none uppercase"
-            style={{
-              padding: "5px 7px",
-              borderRadius: 7,
-              background: "transparent",
-              border: `1px solid #58A6FF99`,
-              color: "#58A6FF",
-              fontSize: 9,
-              fontWeight: 700,
-              letterSpacing: 0.5,
-              fontFamily: "inherit",
-            }}
-          >
-            <Pencil className="w-[11px] h-[11px]" />
-            Edit
-          </button>
-        ) : (
+        {(
           <button
             onClick={onReport}
             type="button"

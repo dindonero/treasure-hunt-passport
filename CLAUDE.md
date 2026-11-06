@@ -33,6 +33,24 @@ Photo keys: the landing derives `HMAC(PHOTO_MASTER_KEY, player:nonce)` and for
 Arkiv. `PHOTO_MASTER_KEY` exists only as a Sensitive env var on the landing
 project; losing it makes every stored photo unreadable.
 
+## UI changes on 2026-11-06 (after the passport)
+
+- **Bottom nav:** Home, Map, Scan, Passport, Merch. The leaderboard left the nav;
+  it is reachable from Home and from the header's balance menu ("Ranking").
+- **Header** (`components/app-header.tsx`): ported from the Devcon edition without
+  i18n. Balance pill opens a menu (Store, Tags found, Ranking); wallet pill opens
+  the account menu (name, sign-in method, address copy, Passport, explorer, sign
+  out). The "Set name" button is gone; players set a handle after their first
+  find (tag page) or on the leaderboard (`components/username-form.tsx`).
+- **"Hide your own tag" is removed:** no player ownership of tags. Deleted the
+  gate modal, the own-tag sheet, `claim-ownership`/`unclaim-ownership`/
+  `owns-any-tag`/`user-tag-status`/`user-objects` routes, the home CTA, the
+  find-route gating and the tag-status state in `lib/wallet-context.tsx`. A blank
+  tag shows "Not set up yet"; admins set it up from the tag page ("Admin: Set up
+  this tag", `/api/admin/nfc-tags`) or the admin panel. The owner-view branch of
+  the tag page and `/api/nfc-tags/update` still exist for the admin-skip path
+  (and would apply to an `owner_address` set by hand in the admin panel).
+
 ## Deployment (two demo editions)
 
 | | mumbai1 | mumbai2 |
