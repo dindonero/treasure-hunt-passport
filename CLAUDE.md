@@ -53,9 +53,13 @@ project; losing it makes every stored photo unreadable.
   on urbanlab (backup `paymaster-proxy.js.bak-2026-11-06-mumbai`).
 - DBs were bootstrapped with the schema, the 17 admin wallets copied from Devcon,
   and the active `contract_deployments` row.
-- Arkiv issuer: `0x2e246E61039Eb470aBFf1E20E71D414756Af5a0e`; key and access key
-  in `.env.arkiv-issuer` (gitignored) and on both Vercel projects. Hub login is
-  wallet-only; access key and faucet need a human captcha click.
+- Arkiv issuer: `0x2e246E61039Eb470aBFf1E20E71D414756Af5a0e`, funded with tGLM
+  moved from `0x7502…1081` (the game signer, which the user signed in to the Hub
+  with). Issuer key and access key (`ark_live_…`, project "treasure-hunt-passport",
+  Hub account `0x7502…1081`) are in `.env.arkiv-issuer` (gitignored) and on both
+  editions + the landing as Sensitive vars. Hub login is wallet-only; generating a
+  key or using the faucet needs the user to tick the captcha themselves. A full
+  check-script run costs about 0.0015 tGLM.
 
 ## Project structure
 
