@@ -56,6 +56,13 @@ log("second call: no duplicate badge")
 r = await ed1("/api/passport/badge", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ claimCode: "00000000-0000-0000-0000-000000000000" }) })
 assert.equal(r.status, 404); log("unknown tag: 404")
 
+// the name the player picks reaches the passport (written after the response, so poll)
+const name = "e2e" + randomBytes(3).toString("hex")
+r = await ed1("/api/auth/set-username", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ username: name }) })
+assert.equal(r.status, 200)
+for (let i = 0; i < 15 && (j = await (await ed1("/api/passport")).json()).passport?.handle !== name; i++) await new Promise(res => setTimeout(res, 2000))
+assert.equal(j.passport.handle, name); log("name on the passport:", name)
+
 // 4. photo: upload at mumbai1, read back, read at mumbai2, delete at mumbai2, gone at mumbai1
 const photo = Buffer.concat([Buffer.from([0xff, 0xd8, 0xff, 0xe0]), randomBytes(3000)])
 const fd = new FormData(); fd.append("file", new Blob([photo], { type: "image/jpeg" }), "p.jpg")
@@ -66,7 +73,7 @@ assert.deepEqual(Buffer.from(await r.arrayBuffer()), photo); log("mumbai1 photo 
 
 const ed2 = await login(ED2)
 r = await ed2("/api/passport"); j = await r.json()
-assert.equal(j.passport.photoNonce, nonce); assert.deepEqual(j.badges.map(b => b.edition), ["mumbai1"])
+assert.equal(j.passport.photoNonce, nonce); assert.equal(j.passport.handle, name); assert.deepEqual(j.badges.map(b => b.edition), ["mumbai1"])
 log("mumbai2 sees the passport: badge from mumbai1 + photo nonce, with its own empty database")
 r = await ed2("/api/passport/photo"); assert.equal(r.status, 200); assert.deepEqual(Buffer.from(await r.arrayBuffer()), photo)
 log("mumbai2 photo decrypts to the original")

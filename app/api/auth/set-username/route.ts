@@ -1,6 +1,10 @@
-import { type NextRequest, NextResponse } from "next/server"
+import { type NextRequest, NextResponse, after } from "next/server"
+import { setHandle } from "@/lib/arkiv"
 import { getAuthPayload } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
+
+// Leaves room for the passport name write that runs after the response.
+export const maxDuration = 60
 
 const USERNAME_REGEX = /^[a-zA-Z0-9 ._-]+$/
 
@@ -56,6 +60,12 @@ export async function POST(request: NextRequest) {
       }
       throw upsertError
     }
+
+    // Carry the name on the passport too, so other editions show it. After the
+    // response: an Arkiv write takes a block or two and the name is already saved.
+    after(() =>
+      setHandle(caller.toLowerCase(), username).catch((e) => console.error("passport handle update failed:", e)),
+    )
 
     return NextResponse.json({ success: true, handle: username })
   } catch (error) {

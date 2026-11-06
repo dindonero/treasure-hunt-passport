@@ -211,9 +211,26 @@ export async function setPhoto(player: string, photo: string, photoNonce: string
     return
   }
   await write().executeBatch({
-    patches: [{ schema: Passport, entityKey: passport.key as `0x${string}`, set: { photo, photoNonce } }],
+    patches: [
+      {
+        schema: Passport,
+        entityKey: passport.key as `0x${string}`,
+        set: { photo, photoNonce, ...(handle ? { handle: str128(handle) } : {}) },
+      },
+    ],
     extensions: [{ entityKey: passport.key as `0x${string}`, expiration }],
   })
+}
+
+/**
+ * Put the name the player picked on their passport. Players pick it after their
+ * first find, which is when the passport is created, so it would otherwise only
+ * reach the passport with a photo. No passport yet: the first badge carries it.
+ */
+export async function setHandle(player: string, handle: string) {
+  const passport = await getPassport(player)
+  if (!passport || passport.handle === str128(handle)) return
+  await write().patchEntity(Passport, passport.key as `0x${string}`, { set: { handle: str128(handle) } })
 }
 
 /**
